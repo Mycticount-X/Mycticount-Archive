@@ -75,28 +75,29 @@
 }
 
 .achievement-card:nth-child(4) .achievement-icon {
-    color: #10b981; /* Green for Microsoft */
-}
-
-.achievement-card:nth-child(5) .achievement-icon {
-    color: #ec4899; /* Pink for Teaching */
-}
-
-.achievement-card:nth-child(6) .achievement-icon {
-    color: #14b8a6; /* Orange for Notes */
-}
-
-.achievement-card:nth-child(7) .achievement-icon {
     color: #6366f1; /* Indigo for Hackathon */
 }
 
-.achievement-card:nth-child(8) .achievement-icon {
+.achievement-card:nth-child(5) .achievement-icon {
     color: #ef4444; /* Red for CTF */
 }
 
-.achievement-card:nth-child(9) .achievement-icon {
+.achievement-card:nth-child(6) .achievement-icon {
     color: #f97316; /* Teal for Coordinator */
 }
+
+.achievement-card:nth-child(7) .achievement-icon {
+    color: #10b981; /* Green for Microsoft */
+}
+
+.achievement-card:nth-child(8) .achievement-icon {
+    color: #ec4899; /* Pink for Teaching */
+}
+
+.achievement-card:nth-child(9) .achievement-icon {
+    color: #14b8a6; /* Orange for Notes */
+}
+
 
 /* Adjust grid for better 6-card layout */
 @media (min-width: 1200px) {

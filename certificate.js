@@ -1,36 +1,52 @@
 // Certificate data
 const certificateData = {
     cert1: {
-        title: "Deep Learning",
-        issuer: "Issued by NVidia",
-        date: "June 2023",
+        title: "Nvidia Deep Learning",
+        issuer: "Issued by Nvidia",
+        date: "February 2025",
         description: "Comprehensive course covering neural networks, convolutional networks, recurrent networks, and deep learning applications.",
-        image: "https://via.placeholder.com/800x600/3498db/ffffff?text=Deep+Learning+Certificate",
-        download: "#"
+        image: "./assets/nvidia.jpg",
+        download: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
     },
     cert2: {
-        title: "Fundamental AI",
+        title: "Microsoft Azure AI Fundamental",
         issuer: "Issued by Microsoft",
-        date: "March 2023",
+        date: "April 2025",
         description: "Fundamentals of Artificial Intelligence including machine learning concepts, AI ethics, and practical applications.",
-        image: "https://via.placeholder.com/800x600/2ecc71/ffffff?text=Fundamental+AI+Certificate",
-        download: "#"
+        image: "./assets/microsoft.jpg",
+        download: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
     },
     cert3: {
         title: "Crack The Shield Tournament",
-        issuer: "Prestigious CTF tournament from CSC",
-        date: "January 2024",
+        issuer: "Issued by CSC Binus",
+        date: "June 2025",
         description: "Competed in the prestigious Capture The Flag cybersecurity tournament, demonstrating skills in penetration testing and digital forensics.",
-        image: "https://via.placeholder.com/800x600/e74c3c/ffffff?text=Crack+The+Shield+Certificate",
-        download: "#"
+        image: "./assets/ctf.jpg",
+        download: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
     },
     cert4: {
         title: "PIC of Logistics",
-        issuer: "Certificate of Logistic Management",
-        date: "August 2023",
-        description: "Person in Charge certification for logistics management, covering supply chain optimization, inventory management, and distribution strategies.",
-        image: "https://via.placeholder.com/800x600/9b59b6/ffffff?text=PIC+Logistics+Certificate",
-        download: "#"
+        issuer: "Issued by DSC Binus",
+        date: "October 2025",
+        description: "Person in Charge certification for logistics management, covering supply chain optimization, inventory management, and distribution strategies during DSC Welcoming Party 2025.",
+        image: "./assets/pic-log.jpg",
+        download: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
+    },
+    cert5: {
+        title: "DONGKER Certificate",
+        issuer: "Issued by DSC Binus",
+        date: "February 2025",
+        description: "Volunteering on Delegasi Outline Program Kerja (DONGKER) DSC 2025",
+        image: "./assets/dongker.jpeg",
+        download: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
+    },
+    cert6: {
+        title: "Outstanding Performance on DSC Welcoming Party",
+        issuer: "Issued by DSC Binus",
+        date: "October 2025",
+        description: "Certificate of having Outstanding Performance on DSC Welcoming Party 2025",
+        image: "./assets/dongker.jpeg",
+        download: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
     }
 };
 
