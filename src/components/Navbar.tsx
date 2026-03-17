@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,9 +28,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 flex items-center justify-center overflow-hidden rounded-full">
-              <img src="./assets/photo.jpg" alt="Michael" className="w-full h-full object-cover" />
+              <img src="/logo.jpg" alt="Michael" className="w-full h-full object-cover" />
             </div>
-            <span className="font-bold text-xl text-gray-900">Michael A.S</span>
+            <span className="font-bold text-xl text-gray-900">Michael AS</span>
           </div>
 
           {/* Desktop Navigation */}

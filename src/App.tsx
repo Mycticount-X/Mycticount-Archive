@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
 import './App.css';
 
-const Hero = () => <section id="home" className="pt-20 pb-16 min-h-screen flex items-center justify-center"><h1 className="text-3xl font-bold">Hero Section Placeholder</h1></section>;
 const About = () => <section id="about" className="py-20 bg-white flex justify-center"><h2 className="text-2xl">About Section Placeholder</h2></section>;
 const Skills = () => <section id="skills" className="py-20 bg-gray-50 flex justify-center"><h2 className="text-2xl">Skills Section Placeholder</h2></section>;
 const Journey = () => <section id="journey" className="py-20 bg-white flex justify-center"><h2 className="text-2xl">Journey Section Placeholder</h2></section>;
@@ -16,7 +16,7 @@ const App = () => {
     <div className="bg-gray-50 font-sans">
       <Navbar />
       <main>
-        <Hero />
+        <Home />
         <About />
         <Skills />
         <Journey />
