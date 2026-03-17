@@ -52,7 +52,7 @@ const Home = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left fade-in-up">
-            <div className="inline-block mb-4">
+            <div className="inline-block mb-4 mt-8">
               <span className="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold">
                 👋 Welcome to my portfolio
               </span>
@@ -63,12 +63,12 @@ const Home = () => {
             </h1>
 
             <h2 className="text-2xl md:text-3xl text-gray-700 mb-6 font-medium">
-              <span id="typingText" className="typing-text border-r-2 border-gray-700 pr-1">{text}</span>
+              <span id="typingText">{text}</span>
             </h2>
 
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Passionate about building innovative solutions and participating in hackathons.
-              Currently studying at Binus University with a GPA of 3.93.
+              Currently studying at Binus University with a GPA of 3.96.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -103,7 +103,7 @@ const Home = () => {
           <div className="flex justify-center fade-in-up" style={{ animationDelay: '0.2s' }}>
             <div className="relative">
               <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl">
-                <img src="./assets/photo.jpg" alt="Michael Ahlovely Stevenson" className="w-full h-full object-cover" />
+                <img src="./photo.jpg" alt="Michael Ahlovely Stevenson" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg">
                 <div className="text-sm font-medium">Open to Opportunities</div>
@@ -114,7 +114,7 @@ const Home = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 fade-in-up" style={{ animationDelay: '0.4s' }}>
           <div className="bg-white rounded-xl shadow-lg p-6 text-center border border-gray-200 card-hover">
-            <div className="text-4xl font-bold text-blue-600 mb-2">3.93</div>
+            <div className="text-4xl font-bold text-blue-600 mb-2">3.96</div>
             <div className="text-gray-600 font-medium">GPA</div>
           </div>
           <div className="bg-white rounded-xl shadow-lg p-6 text-center border border-gray-200 card-hover">
