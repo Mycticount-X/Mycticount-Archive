@@ -21,7 +21,7 @@ const Certificates = () => {
       issuer: "Issued by Nvidia",
       date: "February 2025",
       description: "Comprehensive course covering neural networks, convolutional networks, recurrent networks, and deep learning applications.",
-      image: "./assets/nvidia.jpg",
+      image: "/nvidia.jpg",
       link: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
     },
     {
@@ -30,7 +30,7 @@ const Certificates = () => {
       issuer: "Issued by Microsoft",
       date: "April 2025",
       description: "Fundamentals of Artificial Intelligence including machine learning concepts, AI ethics, and practical applications.",
-      image: "./assets/microsoft.jpg",
+      image: "/microsoft.jpg",
       link: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
     },
     {
@@ -39,7 +39,7 @@ const Certificates = () => {
       issuer: "Issued by CSC Binus",
       date: "June 2025",
       description: "Competed in the prestigious Capture The Flag cybersecurity tournament, demonstrating skills in penetration testing and digital forensics.",
-      image: "./assets/ctf.jpg",
+      image: "/ctf.jpg",
       link: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
     },
     {
@@ -48,7 +48,7 @@ const Certificates = () => {
       issuer: "Issued by DSC Binus",
       date: "October 2025",
       description: "Person in Charge certification for logistics management, covering supply chain optimization, inventory management, and distribution strategies during DSC Welcoming Party 2025.",
-      image: "./assets/pic-log.jpg",
+      image: "/pic-log.jpg",
       link: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
     },
     {
@@ -57,7 +57,7 @@ const Certificates = () => {
       issuer: "Issued by DSC Binus",
       date: "February 2025",
       description: "Volunteering on Delegasi Outline Program Kerja (DONGKER) DSC 2025",
-      image: "./assets/dongker.jpeg",
+      image: "/dongker.jpeg",
       link: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
     },
     {
@@ -66,7 +66,7 @@ const Certificates = () => {
       issuer: "Issued by DSC Binus",
       date: "October 2025",
       description: "Certificate of having Outstanding Performance on DSC Welcoming Party 2025",
-      image: "./assets/outstanding.png",
+      image: "/outstanding.png",
       link: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
     }
   ];
