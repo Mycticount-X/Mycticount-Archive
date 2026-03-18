@@ -13,7 +13,6 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Journey', href: '#journey' },
     { name: 'Achievements', href: '#achievements' },
@@ -43,7 +42,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <a href="./assets/CV_Michael.pdf" download className="hidden md:inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-md font-medium">
+            <a href="./CV_Michael.pdf" download className="hidden lg:inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-md font-medium">
               <i className="fas fa-download"></i>
               <span>Download CV</span>
             </a>

@@ -6,7 +6,14 @@ const Skills = () => {
       color: "blue",
       gradient: "from-blue-500 to-cyan-500",
       bgLight: "bg-blue-50",
-      skills: ["Python", "TypeScript", "JavaScript", "C/C++", "Java", "R"]
+      skills: [
+        { name: "Python", style: "bg-yellow-100 text-yellow-700" },
+        { name: "TypeScript", style: "bg-blue-100 text-blue-700" },
+        { name: "JavaScript", style: "bg-orange-100 text-orange-700" },
+        { name: "C/C++", style: "bg-green-100 text-green-700" },
+        { name: "Java", style: "bg-red-100 text-red-700" },
+        { name: "R", style: "bg-purple-100 text-purple-700" }
+      ]
     },
     {
       title: "AI & Machine Learning",
@@ -14,7 +21,13 @@ const Skills = () => {
       color: "pink",
       gradient: "from-pink-500 to-rose-500",
       bgLight: "bg-pink-50",
-      skills: ["TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "Azure AI"] // Menambahkan Azure AI sesuai sertifikasimu!
+      skills: [
+        { name: "TensorFlow", style: "bg-red-100 text-red-700" },
+        { name: "PyTorch", style: "bg-orange-100 text-orange-700" },
+        { name: "Scikit-learn", style: "bg-yellow-100 text-yellow-700" },
+        { name: "OpenCV", style: "bg-green-100 text-green-700" },
+        { name: "Azure AI", style: "bg-purple-100 text-purple-700" }
+      ]
     },
     {
       title: "Web Development",
@@ -22,7 +35,13 @@ const Skills = () => {
       color: "purple",
       gradient: "from-purple-500 to-indigo-500",
       bgLight: "bg-purple-50",
-      skills: ["React", "Next.js", "Node.js", "Tailwind CSS", "HTML5", "CSS3", "Bootstrap"]
+      skills: [
+        { name: "HTML5", style: "bg-red-100 text-red-700" },
+        { name: "CSS3", style: "bg-orange-100 text-orange-700" },
+        { name: "Node.js", style: "bg-green-100 text-green-700" },
+        { name: "React", style: "bg-blue-100 text-blue-700" },
+        { name: "Tailwind", style: "bg-cyan-100 text-cyan-700" },
+      ]
     },
     {
       title: "Mobile Development",
@@ -30,7 +49,10 @@ const Skills = () => {
       color: "green",
       gradient: "from-emerald-400 to-green-600",
       bgLight: "bg-green-50",
-      skills: ["React Native", "Flutter"]
+      skills: [
+        { name: "React Native", style: "bg-blue-100 text-blue-700" },
+        { name: "Flutter", style: "bg-cyan-100 text-cyan-700" }
+      ]
     },
     {
       title: "Database & Backend",
@@ -38,7 +60,14 @@ const Skills = () => {
       color: "orange",
       gradient: "from-orange-400 to-red-500",
       bgLight: "bg-orange-50",
-      skills: ["MySQL", "PostgreSQL", "MongoDB", "Firebase", "Supabase"] 
+      skills: [
+        { name: "MySQL", style: "bg-blue-100 text-blue-700" },
+        { name: "PostgreSQL", style: "bg-purple-100 text-purple-700" },
+        { name: "MongoDB", style: "bg-green-100 text-green-700" },
+        { name: "Firebase", style: "bg-red-100 text-red-700" },
+        { name: "FastAPI", style: "bg-orange-100 text-orange-700" },
+        { name: "Supabase", style: "bg-yellow-100 text-yellow-700" },
+      ]
     },
     {
       title: "Tools & Others",
@@ -46,15 +75,22 @@ const Skills = () => {
       color: "gray",
       gradient: "from-gray-600 to-slate-800",
       bgLight: "bg-gray-100",
-      skills: ["Git & GitHub", "Docker", "Figma", "Postman", "VS Code"]
+      skills: [
+        { name: "Git", style: "bg-gray-100 text-gray-700" },
+        { name: "GitHub", style: "bg-orange-100 text-orange-700" },
+        { name: "Docker", style: "bg-blue-100 text-blue-700" },
+        { name: "Figma", style: "bg-purple-100 text-purple-700" },
+        { name: "VS Code", style: "bg-blue-100 text-blue-700" },
+        { name: "Postman", style: "bg-green-100 text-green-700" }
+      ]
     }
   ];
 
   const softSkills = [
-    { name: "Leadership", icon: "fas fa-users", color: "text-blue-600" },
-    { name: "Teamwork", icon: "fas fa-handshake", color: "text-green-600" },
-    { name: "Communication", icon: "fas fa-comments", color: "text-purple-600" },
-    { name: "Problem Solving", icon: "fas fa-lightbulb", color: "text-yellow-500" }
+    { name: "Leadership", icon: "fas fa-users", color: "text-blue-600" , level: null , gradient: "from-blue-600 to-blue-500" },
+    { name: "Teamwork", icon: "fas fa-handshake", color: "text-green-600" , level: null , gradient: "from-green-600 to-green-500" },
+    { name: "Communication", icon: "fas fa-comments", color: "text-red-600" , level: null , gradient: "from-red-600 to-red-500" },
+    { name: "Problem Solving", icon: "fas fa-lightbulb", color: "text-yellow-500" , level: null , gradient: "from-yellow-500 to-yellow-400" }
   ];
 
   return (
@@ -73,6 +109,7 @@ const Skills = () => {
           </p>
         </div>
 
+        {/* Technical Skills Section */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {technicalSkills.map((category, index) => (
             <div 
@@ -94,9 +131,9 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <span 
                     key={skillIndex}
-                    className={`px-4 py-2 rounded-xl text-sm font-semibold bg-gray-50 text-gray-700 border border-gray-100 hover:bg-white hover:shadow-md hover:border-${category.color}-200 transition-all duration-300 cursor-default`}
+                    className={`px-4 py-2 rounded-xl text-sm font-semibold border border-gray-100 hover:shadow-md hover:border-${category.color}-200 transition-all duration-300 cursor-default ${skill.style}`}
                   >
-                    {skill}
+                    {skill.name}
                   </span>
                 ))}
               </div>
@@ -104,27 +141,39 @@ const Skills = () => {
           ))}
         </div>
 
+        {/* Soft Skills Section */}
         <div className="mt-12" data-aos="fade-up" data-aos-offset="0">
-          <div className="bg-gradient-to-br from-gray-900 to-blue-950 rounded-3xl p-10 md:p-14 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+          <div className="bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-sm relative overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none opacity-30 bg-gradient-to-br from-blue-50 to-purple-50"></div>
 
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-10 text-center relative z-10">
-              Beyond the Code: <span className="text-blue-400">Soft Skills</span>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center relative z-10">
+              Beyond the Code: <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Soft Skills</span>
             </h3>
-            
+
+            <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8 relative z-10">
+              Personal strengths and collaboration habits that make projects run smoothly.
+            </p>
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
               {softSkills.map((skill, index) => (
-                <div 
+                <div
                   key={index}
                   data-aos="zoom-in"
-                  data-aos-delay={index * 100}
-                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10 text-center hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1"
+                  data-aos-delay={index * 80}
+                  className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition-transform transform hover:-translate-y-1"
                 >
-                  <div className="w-16 h-16 mx-auto bg-white rounded-2xl flex items-center justify-center mb-4 shadow-lg">
-                    <i className={`${skill.icon} ${skill.color} text-3xl`}></i>
+                  <div className="w-16 h-16 mb-4 rounded-full flex items-center justify-center ring-1 ring-gray-100">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-white/80 to-transparent">
+                      <i className={`${skill.icon} ${skill.color} text-2xl`}></i>
+                    </div>
                   </div>
-                  <h4 className="font-bold text-white tracking-wide">{skill.name}</h4>
+                  <h4 className="font-semibold text-gray-900 tracking-wide">{skill.name}</h4>
+                  <div className="mt-3 w-full">
+                    <div className="h-2 rounded-full bg-gray-100 overflow-hidden">
+                      <div className={`h-2 rounded-full bg-gradient-to-r ${skill.gradient}`} style={{ width: `${skill.level ?? 100}%` }}></div>
+                    </div>
+                    <div className="mt-2 text-xs text-gray-500">{skill.level ? `${skill.level}% mastery` : 'Proven in real projects'}</div>
+                  </div>
                 </div>
               ))}
             </div>
