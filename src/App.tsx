@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Skills from './pages/Skills';
 import Journey from './pages/Journey';
 import Achievement from './pages/Achievement';
 import Certificates from './pages/Certificates';
@@ -8,7 +9,7 @@ import Contact from './pages/Contact';
 import Footer from './pages/Footer';
 import './App.css';
 
-const Skills = () => <section id="skills" className="py-20 bg-gray-50 flex justify-center"><h2 className="text-2xl">Skills Section Placeholder</h2></section>;
+// const Skills = () => <section id="skills" className="py-20 bg-gray-50 flex justify-center"><h2 className="text-2xl">Skills Section Placeholder</h2></section>;
 // const Journey = () => <section id="journey" className="py-20 bg-white flex justify-center"><h2 className="text-2xl">Journey Section Placeholder</h2></section>;
 // const Achievement = () => <section id="achievements" className="py-20 bg-gray-50 flex justify-center"><h2 className="text-2xl">Achievements Section Placeholder</h2></section>;
 // const Certificates = () => <section id="certificates" className="py-20 bg-white flex justify-center"><h2 className="text-2xl">Certificates Section Placeholder</h2></section>;

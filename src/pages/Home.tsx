@@ -66,6 +66,17 @@ const Home = () => {
               <span id="typingText">{text}</span>
             </h2>
 
+            <div className="flex md:hidden justify-center my-8 fade-in-up">
+              <div className="relative">
+                <div className="w-64 h-64 rounded-full overflow-hidden border-8 border-white shadow-xl">
+                  <img src="./photo.jpg" alt="Michael Ahlovely Stevenson" className="w-full h-full object-cover" />
+                </div>
+                <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg">
+                  <div className="text-xs font-medium">Open to Opportunities</div>
+                </div>
+              </div>
+            </div>
+
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Passionate about building innovative solutions and participating in hackathons.
               Currently studying at Binus University with a GPA of 3.96.
@@ -99,8 +110,7 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Profile Image */}
-          <div className="flex justify-center fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="hidden md:flex justify-center fade-in-up" >
             <div className="relative">
               <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl">
                 <img src="./photo.jpg" alt="Michael Ahlovely Stevenson" className="w-full h-full object-cover" />
@@ -112,6 +122,7 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 fade-in-up" style={{ animationDelay: '0.4s' }}>
           <div className="bg-white rounded-xl shadow-lg p-6 text-center border border-gray-200 card-hover">
             <div className="text-4xl font-bold text-blue-600 mb-2">3.96</div>
