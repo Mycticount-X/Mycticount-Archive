@@ -1,3 +1,4 @@
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -22,7 +23,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200 shadow-sm">
+    <motion.nav 
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200 shadow-sm"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
@@ -62,24 +68,34 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-        <div className="px-4 py-4 space-y-3">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="block py-3 px-4 text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
-              onClick={closeMobileMenu}
-            >
-              {link.name}
-            </a>
-          ))}
-          <a href="./assets/CV_Michael.pdf" download className="block py-3 px-4 bg-blue-600 text-white hover:bg-blue-700 rounded-lg transition-colors font-medium text-center">
-            <i className="fas fa-download mr-2"></i>Download CV
-          </a>
-        </div>
-      </div>
-    </nav>
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="md:hidden overflow-hidden bg-white/90 backdrop-blur-md" // Ditambahkan overflow-hidden agar animasi height mulus
+          >
+            <div className="px-4 py-4 space-y-3">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="block py-3 px-4 text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
+                  onClick={closeMobileMenu}
+                >
+                  {link.name}
+                </a>
+              ))}
+              <a href="./assets/CV_Michael.pdf" download className="block py-3 px-4 bg-blue-600 text-white hover:bg-blue-700 rounded-lg transition-colors font-medium text-center">
+                <i className="fas fa-download mr-2"></i>Download CV
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 };
 
