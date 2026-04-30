@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const [text, setText] = useState('');
@@ -39,6 +40,26 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, [text, isDeleting, loopNum, typingSpeed]);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.6,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.6, ease: "easeOut" } 
+    },
+  };
+
   return (
     <section id="home" className="pt-20 pb-16 relative overflow-hidden min-h-screen flex items-center">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"></div>
@@ -51,7 +72,12 @@ const Home = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left fade-in-up">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center lg:text-left"
+          >
             <div className="inline-block mb-4 mt-8">
               <span className="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold">
                 👋 Welcome to my portfolio
@@ -108,9 +134,14 @@ const Home = () => {
                 <i className="fab fa-youtube text-xl"></i>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="hidden lg:flex justify-center fade-in-up" >
+          <motion.div 
+            initial={{ opacity: 0, x: 50, scale: 0.9 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            className="hidden lg:flex justify-center" 
+          >
             <div className="relative">
               <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl">
                 <img src="./photo.jpg" alt="Michael Ahlovely Stevenson" className="w-full h-full object-cover" />
@@ -119,28 +150,33 @@ const Home = () => {
                 <div className="text-sm font-medium">Open to Opportunities</div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16 fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <div className="bg-white rounded-xl shadow-lg p-6 text-center border border-gray-200 card-hover">
-            <div className="text-4xl font-bold text-blue-600 mb-2">3.96</div>
-            <div className="text-gray-600 font-medium">GPA</div>
-          </div>
-          <div className="bg-white rounded-xl shadow-lg p-6 text-center border border-gray-200 card-hover">
-            <div className="text-4xl font-bold text-blue-600 mb-2">30+</div>
-            <div className="text-gray-600 font-medium">Projects</div>
-          </div>
-          <div className="bg-white rounded-xl shadow-lg p-6 text-center border border-gray-200 card-hover">
-            <div className="text-4xl font-bold text-blue-600 mb-2">6+</div>
-            <div className="text-gray-600 font-medium">Certificates</div>
-          </div>
-          <div className="bg-white rounded-xl shadow-lg p-6 text-center border border-gray-200 card-hover">
-            <div className="text-4xl font-bold text-blue-600 mb-2">4</div>
-            <div className="text-gray-600 font-medium">Organizations</div>
-          </div>
-        </div>
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
+        >
+          {[
+            { value: '3.96', label: 'GPA' },
+            { value: '30+', label: 'Projects' },
+            { value: '6+', label: 'Certificates' },
+            { value: '4', label: 'Organizations' }
+          ].map((stat, index) => (
+            <motion.div 
+              key={index}
+              variants={cardVariants}
+              whileHover={{ y: -10 }}
+              className="bg-white rounded-xl shadow-lg p-6 text-center border border-gray-200"
+            >
+              <div className="text-4xl font-bold text-blue-600 mb-2">{stat.value}</div>
+              <div className="text-gray-600 font-medium">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
