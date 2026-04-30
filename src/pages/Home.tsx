@@ -137,9 +137,9 @@ const Home = () => {
           </motion.div>
 
           <motion.div 
-            initial={{ opacity: 0, x: 50, scale: 0.9 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0, ease: "easeOut" }}
             className="hidden lg:flex justify-center" 
           >
             <div className="relative">
