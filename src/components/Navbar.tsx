@@ -13,6 +13,29 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleNavClick = (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    
+    closeMobileMenu();
+
+    const targetId = href.replace('#', '');
+    const target = document.getElementById(targetId);
+
+    if (target) {
+      setTimeout(() => {
+        const navbarOffset = 72;
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarOffset;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth',
+        });
+
+        window.history.replaceState(null, '', href);
+      }, 150);
+    }
+  };
+
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Skills', href: '#skills' },
@@ -39,17 +62,22 @@ const Navbar = () => {
             <span className="font-bold text-xl text-gray-900">Michael AS</span>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex desktop-nav space-x-6">
+          {/* Desktop Navigation - Ubah md:flex menjadi lg:flex agar selaras dengan CSS 1024px */}
+          <div className="hidden lg:flex desktop-nav space-x-6">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className="nav-link text-gray-700 hover:text-blue-600 font-medium">
+              <a
+                key={link.name}
+                href={link.href}
+                className="nav-link text-gray-500 hover:text-gold font-medium"
+                onClick={handleNavClick(link.href)}
+              >
                 {link.name}
               </a>
             ))}
           </div>
 
           <div className="flex items-center space-x-4">
-            <a href="./CV_Michael.pdf" download className="hidden lg:inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-md font-medium">
+            <a href="./CV_Michael.pdf" download className="hidden lg:inline-flex items-center space-x-2 bg-black text-white px-6 py-2 rounded-lg hover:bg-gold hover:text-black transition-colors shadow-md font-medium">
               <i className="fas fa-download"></i>
               <span>Download CV</span>
             </a>
@@ -76,20 +104,20 @@ const Navbar = () => {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden bg-white/90 backdrop-blur-md" // Ditambahkan overflow-hidden agar animasi height mulus
+            className="lg:hidden overflow-hidden bg-white/90 backdrop-blur-md"
           >
             <div className="px-4 py-4 space-y-3">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block py-3 px-4 text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
-                  onClick={closeMobileMenu}
+                  className="block py-3 px-4 text-gray-500 hover:bg-gray-50 hover:text-gold rounded-lg transition-colors font-medium"
+                  onClick={handleNavClick(link.href)}
                 >
                   {link.name}
                 </a>
               ))}
-              <a href="./assets/CV_Michael.pdf" download className="block py-3 px-4 bg-blue-600 text-white hover:bg-blue-700 rounded-lg transition-colors font-medium text-center">
+              <a href="./assets/CV_Michael.pdf" download className="block py-3 px-4 bg-black text-white hover:bg-gold hover:text-black rounded-lg transition-colors font-medium text-center">
                 <i className="fas fa-download mr-2"></i>Download CV
               </a>
             </div>
