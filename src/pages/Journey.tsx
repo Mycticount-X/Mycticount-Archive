@@ -1,3 +1,5 @@
+import './Journey.css';
+
 const Journey = () => {
   const journeyData = [
     {

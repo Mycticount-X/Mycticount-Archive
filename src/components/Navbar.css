@@ -1,0 +1,66 @@
+/* Navlink Underline Animation */
+.nav-link {
+	position: relative;
+}
+
+.nav-link::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: -4px;
+	left: 0;
+	background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+	transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+	width: 100%;
+}
+
+/* Hamburger menu */
+.hamburger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	width: 28px;
+	height: 24px;
+	justify-content: space-between;
+}
+
+.hamburger span {
+	display: block;
+	height: 3px;
+	width: 100%;
+	background-color: #1f2937;
+	border-radius: 3px;
+	transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+	transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+	transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+@media (max-width: 1024px) {
+	.hamburger {
+		display: flex;
+	}
+
+	.mobile-menu {
+		display: block;
+	}
+
+	.desktop-nav {
+		display: none !important;
+	}
+}
