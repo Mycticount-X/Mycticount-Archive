@@ -62,13 +62,13 @@ const Navbar = () => {
             <span className="font-bold text-xl text-gray-900">Michael AS</span>
           </div>
 
-          {/* Desktop Navigation - Ubah md:flex menjadi lg:flex agar selaras dengan CSS 1024px */}
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex desktop-nav space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="nav-link text-gray-500 hover:text-gold font-medium"
+                className="nav-link text-gray-500 hover:text-blue-600 font-medium"
                 onClick={handleNavClick(link.href)}
               >
                 {link.name}
@@ -77,7 +77,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <a href="./CV_Michael.pdf" download className="hidden lg:inline-flex items-center space-x-2 bg-black text-white px-6 py-2 rounded-lg hover:bg-gold hover:text-black transition-colors shadow-md font-medium">
+            <a href="./CV_Michael.pdf" download className="hidden lg:inline-flex items-center space-x-2 bg-black text-white px-6 py-2 rounded-lg hover:bg-blue-300 hover:text-black transition-colors shadow-md font-medium">
               <i className="fas fa-download"></i>
               <span>Download CV</span>
             </a>
@@ -111,13 +111,13 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block py-3 px-4 text-gray-500 hover:bg-gray-50 hover:text-gold rounded-lg transition-colors font-medium"
+                  className="block py-3 px-4 text-gray-500 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
                   onClick={handleNavClick(link.href)}
                 >
                   {link.name}
                 </a>
               ))}
-              <a href="./assets/CV_Michael.pdf" download className="block py-3 px-4 bg-black text-white hover:bg-gold hover:text-black rounded-lg transition-colors font-medium text-center">
+              <a href="./CV_Michael.pdf" download className="block py-3 px-4 bg-black text-white hover:bg-blue-300 hover:text-black rounded-lg transition-colors font-medium text-center">
                 <i className="fas fa-download mr-2"></i>Download CV
               </a>
             </div>
