@@ -39,6 +39,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Education', href: '#education' },
     { name: 'Journey', href: '#journey' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Certificates', href: '#certificates' },
