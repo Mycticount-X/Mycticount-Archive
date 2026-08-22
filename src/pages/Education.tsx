@@ -10,10 +10,13 @@ const Education = () => {
     gpa: '3.97',
     streaming: 'Intelligent System',
     description: [
-      'Focusing on Artificial Intelligence, Machine Learning, and Data Science.',
-      'Awarded Best Student Award for maintaining an exceptional academic record.',
-      'Active participant in regional Hackathons and competitive programming.',
-      'Collaborated on multiple research papers regarding computer vision.'
+      <>Experienced in <strong>Full-Stack Web and Mobile Development</strong>, building scalable applications to solve real-world problems.</>,
+      <>Selected for the <strong>Elite S-Class program</strong> at BINUS University, an exclusive class and academic training for top-performing students.</>,
+      <>Maintaining an <strong>Exceptional Academic Record</strong> while holding active leadership roles across 4 different student organizations.</>,
+      <>Trusted as <strong>PIC of Event and Logistics</strong> for large-scale tech events, including DSC Olympiad 2025 and DSC Welcoming Party 2025.</>,
+      <>Recognized with the <strong>'Outstanding Performance'</strong> award at DSC Binus for exceptional contributions to event management and organizational growth.</>,
+      <>Competitive Hackathon Participant (<strong>Microsoft elevAIte 2024, Gemastik 2025, DevFest Jakarta 2025</strong>), consistently delivering innovative tech solutions under pressure.</>,
+      <>Active contributor to <strong>Academic Research Paper</strong>, specifically focusing on <strong>Artificial Intelligence and Computer Vision</strong> at prominent research conferences.</>
     ]
   };
 
@@ -127,11 +130,16 @@ const Education = () => {
                 </div>
               </div>
 
-              <div className="bg-blue-50 rounded-xl p-4 mb-6 border border-blue-100">
-                <div className="flex items-center justify-between font-semibold">
-                  <span className="text-gray-700">GPA: <span className="text-blue-600">{universityInfo.gpa}</span></span>
-                  <span className="text-gray-400">|</span>
-                  <span className="text-gray-700">Streaming: <span className="text-blue-600">{universityInfo.streaming}</span></span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6" aria-label="Academic achievements">
+                <div className="rounded-xl border border-blue-100 bg-gradient-to-br from-blue-50 to-white p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">GPA</p>
+                  <p className="mt-1 text-2xl font-bold text-black">
+                    {universityInfo.gpa} <span className="text-sm font-medium text-gray-500">/ 4.00</span>
+                  </p>
+                </div>
+                <div className="rounded-xl border border-blue-100 bg-gradient-to-br from-blue-50 to-white p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">Streaming</p>
+                  <p className="mt-1 text-lg font-bold leading-8 text-black">{universityInfo.streaming}</p>
                 </div>
               </div>
 
