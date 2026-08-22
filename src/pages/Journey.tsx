@@ -4,30 +4,25 @@ const Journey = () => {
   const journeyData = [
     {
       id: 1,
-      institution: "Binus University",
-      role: "Computer Science Student",
+      institution: "Bina Nusantara IT Division",
+      role: "Assosiate Developer - Full Stack Developer",
       roleColor: "text-blue-600",
-      period: "2024 - Present",
+      period: "Jan 2026 - Present",
+      logo: "./Education/itdiv.jpg",
       description: "Currently pursuing Bachelor's degree in Computer Science with a GPA of 3.96. Specializing in artificial intelligence and software development.",
       tags: [
-        { text: "GPA: 3.96", bgColor: "bg-blue-100", textColor: "text-blue-700" }
+        { text: "React", bgColor: "bg-purple-100", textColor: "text-purple-700" },
+        { text: "ASP.NET", bgColor: "bg-green-100", textColor: "text-green-700" },
+        { text: "Azure DevOps", bgColor: "bg-blue-100", textColor: "text-blue-700" },
       ]
     },
     {
       id: 2,
-      institution: "Binus SLC",
-      role: "Ex-Trainee Assistant Laboratory",
-      roleColor: "text-green-600",
-      period: "2024",
-      description: "Participated in Core Training program at Binus University Student Laboratory Center.",
-      tags: []
-    },
-    {
-      id: 3,
       institution: "S-Class Binus",
       role: "Vice President",
       roleColor: "text-purple-600",
-      period: "2024 - Present",
+      period: "Des 2024 - Present",
+      logo: "./Education/sclass.jpg",
       description: "Serving as the Vice President of S-Class with a focus on Product Creation, leading initiatives in digital product development and actively participating in hackathons to drive innovative solutions.",
       tags: [
         { text: "SigmaLab", bgColor: "bg-red-100", textColor: "text-red-700" },
@@ -35,22 +30,12 @@ const Journey = () => {
       ]
     },
     {
-      id: 4,
-      institution: "DSC Binus",
-      role: "Event Coordinator & PIC of Logistics",
-      roleColor: "text-orange-600",
-      period: "2024 - 2025",
-      description: "Coordinated major events including DSC Olympiad and DSC Welcoming Party 2025, managing logistics and team operations.",
-      tags: [
-        { text: "Outstanding Performance", bgColor: "bg-orange-100", textColor: "text-orange-700" }
-      ]
-    },
-    {
-      id: 5,
+      id: 3,
       institution: "Myctix Archive",
       role: "Founder",
       roleColor: "text-teal-600",
-      period: "2024 - Present",
+      period: "Agu 2025 - Present",
+      logo: "./Education/myctix-archive.jpg",
       description: "Created a digital learning platform on Notion for Binus Computer Science students, helping 100+ students with structured study materials.",
       tags: [
         { text: "100+ Users", bgColor: "bg-teal-100", textColor: "text-teal-700" },
@@ -58,14 +43,47 @@ const Journey = () => {
       ]
     },
     {
-      id: 6,
-      institution: "Teach for Indonesia",
-      role: "Volunteer English Lecturer",
-      roleColor: "text-pink-600",
-      period: "2024",
-      description: "Served as volunteer English Lecturer, mentoring young learners to improve their language skills.",
+      id: 4,
+      institution: "Binus SLC",
+      role: "Ex-Trainee Assistant Laboratory",
+      roleColor: "text-green-600",
+      period: "Sep 2024 - Des 2024",
+      logo: "./Education/slc.jpg",
+      description: "Participated in Core Training and Pre-Training program at Binus University Student Laboratory Center.",
       tags: []
-    }
+    },
+    
+    // {
+    //   id: 6,
+    //   institution: "Teach for Indonesia",
+    //   role: "Volunteer English Lecturer",
+    //   roleColor: "text-pink-600",
+    //   period: "2024",
+    //   description: "Served as volunteer English Lecturer, mentoring young learners to improve their language skills.",
+    //   tags: []
+    // }
+    // {
+    //   id: 1,
+    //   institution: "Binus University",
+    //   role: "Computer Science Student",
+    //   roleColor: "text-blue-600",
+    //   period: "2024 - Present",
+    //   description: "Currently pursuing Bachelor's degree in Computer Science with a GPA of 3.96. Specializing in artificial intelligence and software development.",
+    //   tags: [
+    //     { text: "GPA: 3.96", bgColor: "bg-blue-100", textColor: "text-blue-700" }
+    //   ]
+    // },
+    // {
+    //   id: 4,
+    //   institution: "DSC Binus",
+    //   role: "PIC of Logistics and Events",
+    //   roleColor: "text-orange-600",
+    //   period: "2024 - 2025",
+    //   description: "Coordinated major events including DSC Olympiad and DSC Welcoming Party 2025, managing logistics and team operations.",
+    //   tags: [
+    //     { text: "Outstanding Performance", bgColor: "bg-orange-100", textColor: "text-orange-700" }
+    //   ]
+    // },
   ];
 
   return (
@@ -90,28 +108,40 @@ const Journey = () => {
                 <div className="timeline-dot"></div>
                 
                 <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900">{item.institution}</h3>
-                      <p className={`${item.roleColor} font-medium`}>{item.role}</p>
+                  <div className="flex flex-col md:flex-row gap-4">
+                    <div className="shrink-0 flex justify-center md:justify-start">
+                      <img
+                        src={item.logo}
+                        alt={`${item.institution} logo`}
+                        className="w-16 h-16 object-cover rounded-lg border border-gray-200"
+                      />
                     </div>
-                    <span className="text-gray-500 font-medium mt-2 md:mt-0">{item.period}</span>
+
+                    <div className="flex-1">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                          <h3 className="text-xl font-bold text-gray-900">{item.institution}</h3>
+                          <p className={`${item.roleColor} font-medium`}>{item.role}</p>
+                        </div>
+                        <span className="text-gray-500 font-medium mt-2 md:mt-0">{item.period}</span>
+                      </div>
+
+                      <p className="text-gray-700">{item.description}</p>
+
+                      {item.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mt-4">
+                          {item.tags.map((tag, tagIndex) => (
+                            <span
+                              key={tagIndex}
+                              className={`px-3 py-1 rounded-full text-sm font-medium ${tag.bgColor} ${tag.textColor}`}
+                            >
+                              {tag.text}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  
-                  <p className="text-gray-700">{item.description}</p>
-                  
-                  {item.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {item.tags.map((tag, tagIndex) => (
-                        <span 
-                          key={tagIndex} 
-                          className={`px-3 py-1 rounded-full text-sm font-medium ${tag.bgColor} ${tag.textColor}`}
-                        >
-                          {tag.text}
-                        </span>
-                      ))}
-                    </div>
-                  )}
                 </div>
               </div>
             ))}
