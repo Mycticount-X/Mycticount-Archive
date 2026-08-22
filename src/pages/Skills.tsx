@@ -86,31 +86,22 @@ const Skills = () => {
     }
   ];
 
-  const softSkills = [
-    { name: "Leadership", icon: "fas fa-users", color: "text-blue-600" , level: null , gradient: "from-blue-600 to-blue-500" },
-    { name: "Teamwork", icon: "fas fa-handshake", color: "text-green-600" , level: null , gradient: "from-green-600 to-green-500" },
-    { name: "Communication", icon: "fas fa-comments", color: "text-red-600" , level: null , gradient: "from-red-600 to-red-500" },
-    { name: "Problem Solving", icon: "fas fa-lightbulb", color: "text-yellow-500" , level: null , gradient: "from-yellow-500 to-yellow-400" }
-  ];
-
   return (
     <section id="skills" className="py-24 bg-white relative">
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="text-center mb-20" data-aos="fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-            Skills & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Technologies</span>
-          </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto mt-6">
+        <div className="text-center mb-16 fade-in-up">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Skills & Technologies</h2>
+          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          <p className="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
             A comprehensive overview of my technical expertise and tools I use to build digital solutions.
           </p>
         </div>
 
         {/* Technical Skills Section */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technicalSkills.map((category, index) => (
             <div 
               key={index}
@@ -142,7 +133,7 @@ const Skills = () => {
         </div>
 
         {/* Soft Skills Section */}
-        <div className="mt-12" data-aos="fade-up" data-aos-offset="0">
+        {/* <div className="mt-12" data-aos="fade-up" data-aos-offset="0">
           <div className="bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-sm relative overflow-hidden">
             <div className="absolute inset-0 pointer-events-none opacity-30 bg-gradient-to-br from-blue-50 to-purple-50"></div>
 
@@ -178,7 +169,7 @@ const Skills = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>
