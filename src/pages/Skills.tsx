@@ -12,11 +12,11 @@ const Skills = () => {
         { name: "JavaScript", style: "bg-orange-100 text-orange-700" },
         { name: "C/C++", style: "bg-green-100 text-green-700" },
         { name: "Java", style: "bg-red-100 text-red-700" },
-        { name: "R", style: "bg-purple-100 text-purple-700" }
+        { name: "C#", style: "bg-purple-100 text-purple-700" }
       ]
     },
     {
-      title: "AI & Machine Learning",
+      title: "AI & Data Science",
       icon: "fas fa-brain",
       color: "pink",
       gradient: "from-pink-500 to-rose-500",
@@ -24,9 +24,10 @@ const Skills = () => {
       skills: [
         { name: "TensorFlow", style: "bg-red-100 text-red-700" },
         { name: "PyTorch", style: "bg-orange-100 text-orange-700" },
-        { name: "Scikit-learn", style: "bg-yellow-100 text-yellow-700" },
+        { name: "Keras", style: "bg-yellow-100 text-yellow-700" },
         { name: "OpenCV", style: "bg-green-100 text-green-700" },
-        { name: "Azure AI", style: "bg-purple-100 text-purple-700" }
+        { name: "Azure AI", style: "bg-purple-100 text-purple-700" },
+        { name: "Pandas", style: "bg-gray-100 text-gray-700" },
       ]
     },
     {
@@ -41,6 +42,7 @@ const Skills = () => {
         { name: "Node.js", style: "bg-green-100 text-green-700" },
         { name: "React", style: "bg-blue-100 text-blue-700" },
         { name: "Tailwind", style: "bg-cyan-100 text-cyan-700" },
+        { name: "Vite", style: "bg-purple-100 text-purple-700" },
       ]
     },
     {
@@ -51,7 +53,9 @@ const Skills = () => {
       bgLight: "bg-green-50",
       skills: [
         { name: "React Native", style: "bg-blue-100 text-blue-700" },
-        { name: "Flutter", style: "bg-cyan-100 text-cyan-700" }
+        { name: "Flutter", style: "bg-cyan-100 text-cyan-700" },
+        { name: "Expo", style: "bg-purple-100 text-purple-700" },
+        { name: "EAS Builder", style: "bg-gray-100 text-gray-700" },
       ]
     },
     {
@@ -61,27 +65,30 @@ const Skills = () => {
       gradient: "from-orange-400 to-red-500",
       bgLight: "bg-orange-50",
       skills: [
-        { name: "MySQL", style: "bg-blue-100 text-blue-700" },
-        { name: "PostgreSQL", style: "bg-purple-100 text-purple-700" },
-        { name: "MongoDB", style: "bg-green-100 text-green-700" },
         { name: "Firebase", style: "bg-red-100 text-red-700" },
         { name: "FastAPI", style: "bg-orange-100 text-orange-700" },
         { name: "Supabase", style: "bg-yellow-100 text-yellow-700" },
+        { name: "ASP.NET", style: "bg-gray-100 text-gray-700" },
+        { name: "MySQL", style: "bg-blue-100 text-blue-700" },
+        { name: "PostgreSQL", style: "bg-purple-100 text-purple-700" },
+        { name: "MongoDB", style: "bg-green-100 text-green-700" },
       ]
     },
     {
-      title: "Tools & Others",
+      title: "DevOps & Tools",
       icon: "fas fa-tools",
       color: "gray",
       gradient: "from-gray-600 to-slate-800",
       bgLight: "bg-gray-100",
       skills: [
-        { name: "Git", style: "bg-gray-100 text-gray-700" },
-        { name: "GitHub", style: "bg-orange-100 text-orange-700" },
+        { name: "Git", style: "bg-yellow-100 text-yellow-700" },
+        { name: "GitHub", style: "bg-green-100 text-green-700" },
+        { name: "Vercel", style: "bg-gray-100 text-gray-700" },
+        { name: "Azure DevOps", style: "bg-blue-100 text-blue-700" },
+        { name: "Postman", style: "bg-orange-100 text-orange-700" },
+        { name: "Figma", style: "bg-teal-100 text-teal-700" },
+        { name: "VS Code", style: "bg-gray-100 text-gray-700" },
         { name: "Docker", style: "bg-blue-100 text-blue-700" },
-        { name: "Figma", style: "bg-purple-100 text-purple-700" },
-        { name: "VS Code", style: "bg-blue-100 text-blue-700" },
-        { name: "Postman", style: "bg-green-100 text-green-700" }
       ]
     }
   ];
