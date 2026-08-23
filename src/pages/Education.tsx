@@ -183,9 +183,9 @@ const Education = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-8"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
         >
-          <motion.div variants={cardVariants} className="lg:col-span-5 flex">
+          <motion.div variants={cardVariants} className="lg:col-span-5 h-fit">
             <div className="bg-white border border-gray-200 rounded-2xl shadow-lg p-8 w-full flex flex-col hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center space-x-6 mb-6">
                 <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-blue-50 shadow-sm flex-shrink-0">
