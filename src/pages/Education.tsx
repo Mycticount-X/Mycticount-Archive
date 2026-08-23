@@ -1,6 +1,21 @@
 import { useState } from 'react';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 
+type Role = {
+  title: string;
+  period: string;
+  description?: React.ReactNode;
+};
+
+type Organization = {
+  id: string;
+  name: string;
+  shortName: string;
+  logo: string;
+  currentPosition: string;
+  roles: Role[];
+};
+
 const Education = () => {
   const [expandedOrg, setExpandedOrg] = useState<string | null>('dsc');
 
@@ -20,18 +35,34 @@ const Education = () => {
     ]
   };
 
-  const organizations = [
+  const organizations: Organization[] = [
     {
       id: 'dsc',
       name: 'Data Science Club',
-      shortName: 'GDSC',
+      shortName: 'DSC',
       logo: './Education/dsc.jpg',
       currentPosition: 'PIC of Events and Logistics',
       roles: [
-        { title: 'PIC of Events', period: 'Agu 2025 - Des 2025' },
-        { title: 'PIC of Logistics', period: 'Agu 2025 - Okt 2025' },
-        { title: 'Activist of Human Capital', period: 'Jan 2025 - Present' },
-        { title: 'Member', period: 'Agu 2024 - Jan 2025' }
+        { 
+          title: 'PIC of Events', 
+          period: 'Aug 2025 - Dec 2025',
+          description: <>During <b>DSC Olympiad 2025</b>, I served as the Person in Charge (PIC) of the Event Division. I was responsible for <b>planning and coordinating the overall event flow</b>, managing the timeline, and ensuring that each session ran according to schedule. I closely <b>supervised event execution</b> on the day of the competition, coordinated with multiple divisions, and addressed on-site issues to maintain a smooth and engaging experience for participants and committees.</>
+        },
+        { 
+          title: 'PIC of Logistics', 
+          period: 'Aug 2025 - Oct 2025',
+          description: <>During the <b>Welcoming Party 2025</b>, I served as the PIC of the Logistic Division. My responsibilities included <b>overseeing inventory, handling equipment and supplies</b>, and managing food and beverage distribution throughout the event. I collaborated closely with other divisions to ensure <b>seamless operations</b> and a successful event experience for all participants.</>
+        },
+        { 
+          title: 'Activist of Human Capital', 
+          period: 'Jan 2025 - Present',
+          description: <>As an Activist in the Human Capital (HC) Division, I was responsible for <b>developing and facilitating programs</b> that support both personal and professional growth. The HC Division acts as the heart of DSC, <b>managing member recruitment, internal training, and engagement initiatives</b> that foster teamwork. Through these activities, I contributed to building a supportive environment where members could thrive, share knowledge, and <b>maximize their potential</b> in both technical and interpersonal aspects.</>
+        },
+        { 
+          title: 'Member', 
+          period: 'Aug 2024 - Jan 2025',
+          description: <>Engaged in a community of students passionate about data. Together, we <b>explored concepts in analytics</b>, shared technical knowledge, and supported each other in <b>developing projects and case studies</b>.</>
+        }
       ]
     },
     {
@@ -41,18 +72,35 @@ const Education = () => {
       logo: './Education/himti.jpg',
       currentPosition: 'Activist of Education',
       roles: [
-        { title: 'Activist of Education', period: 'Jan 2025 - Present' },
-        { title: 'Member', period: 'Agu 2024 - Jan 2025' }
+        { 
+          title: 'Activist of Education', 
+          period: 'Jan 2025 - Present',
+          description: <>As an Activist of the Education Commission at HIMTI BINUS University, I contributed to the <b>academic growth of Informatics students</b> by designing and facilitating various learning initiatives. My responsibilities included developing <b>VBL (Video Based Learning)</b>, organizing study clubs, and managing <b>Notion-based summaries and resources</b> to support students’ understanding of core courses.<br /><br />I also took part in <b>HIMTI Responsi</b>, a pre-exam tutoring program where I helped prepare review sessions and study guides before mid-term and final exams. Through this role, I strengthened my skills in <b>teaching, curriculum planning, and educational content management</b> while promoting a collaborative and supportive learning environment.</>
+        },
+        { 
+          title: 'Member', 
+          period: 'Aug 2024 - Jan 2025',
+          description: <>As a member of HIMTI, the <b>largest and most influential student association</b> for the School of Computer Science at BINUS University, I actively contributed to fostering a strong <b>academic and professional development community</b> among students.</>
+        }
       ]
     },
     {
-      id: 'csc',
-      name: 'Cyber Security Community',
-      shortName: 'CSC',
-      logo: './Education/csc.jpg',
-      currentPosition: 'Member',
+      id: 'sclass',
+      name: 'S-Class',
+      shortName: 'S-Class',
+      logo: './Education/sclass.jpg',
+      currentPosition: 'Vice President',
       roles: [
-        { title: 'Member', period: 'Agu 2024 - Present' },
+        {
+          title: 'Vice President',
+          period: 'Jan 2026 - Present',
+          description: <>As Vice President, I directed the overall operations of S-Class and oversaw three core divisions: <b>Product Creation, Competition, and Research</b>. I spearheaded major programs such as <b>General Training and Gatherings</b>, and successfully structured an active <b>Discord community</b> to foster engagement, seamless communication, and collaboration among high-achieving students.</>
+        },
+        {
+          title: 'Member',
+          period: 'Aug 2025 - Jan 2026',
+          description: <>During my time as a member, I actively participated in the <b>Product Creation Division</b>, focusing on developing end-to-end applications. I applied my software development skills to build innovative digital products and represented the organization in prestigious national hackathons, notably competing in <b>Microsoft elevAIte 2024</b> and <b>Gemastik 2025</b>.</>
+        }
       ]
     },
     {
@@ -62,10 +110,32 @@ const Education = () => {
       logo: './logo.jpg',
       currentPosition: 'General Coordinator',
       roles: [
-        { title: 'General Coordinator', period: 'Jan 2026 - Present' },
-        { title: 'Member', period: 'Jan 2025 - Jan 2026' },
+        { 
+          title: 'General Coordinator', 
+          period: 'Jan 2026 - Present',
+          description: <>As General Coordinator, I oversaw the organization's daily operations and managed member participation. I was responsible for <b>coordinating technical training sessions</b>, tracking attendance, and providing <b>hands-on assistance and mentorship</b> to members, ensuring they successfully grasped the curriculum and developed their technical skills.</>
+        },
+        { 
+          title: 'Member', 
+          period: 'Jan 2025 - Jan 2026',
+          description: <>Operating in collaboration with the <b>S-Class Product Division</b>, I focused on software development and product creation. I applied my technical skills to build competitive applications and actively represented Sigma Lab in major national hackathons, notably competing in <b>Microsoft elevAIte 2024</b> and <b>Gemastik 2025</b>.</>
+        }
       ]
-    }
+    },
+    {
+      id: 'csc',
+      name: 'Cyber Security Community',
+      shortName: 'CSC',
+      logo: './Education/csc.jpg',
+      currentPosition: 'Member',
+      roles: [
+        { 
+          title: 'Member', 
+          period: 'Aug 2024 - Present',
+          description: <>As a Member of the Cyber Security Community (CSC) at BINUS University, I actively joined <b>Capture the Flag (CTF) competitions</b> to apply my knowledge of network security, ethical hacking, and digital forensics. Through these competitions, I strengthened my understanding of <b>cybersecurity fundamentals, threat analysis, and system protection</b>.</>
+        }
+      ]
+    },
   ];
 
   const containerVariants: Variants = {
@@ -203,6 +273,11 @@ const Education = () => {
                                 <span className="absolute flex items-center justify-center w-3 h-3 bg-blue-500 rounded-full -left-[7px] ring-4 ring-white"></span>
                                 <h5 className="font-bold text-gray-800 text-lg">{role.title}</h5>
                                 <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{role.period}</time>
+                                {role.description && (
+                                  <p className="text-gray-600 text-sm mt-2 leading-relaxed">
+                                    {role.description}
+                                  </p>
+                                )}
                               </li>
                             ))}
                           </ul>

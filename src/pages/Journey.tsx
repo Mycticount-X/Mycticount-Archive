@@ -34,7 +34,7 @@ const Journey = () => {
       institution: "Myctix Archive",
       role: "Founder",
       roleColor: "text-teal-600",
-      period: "Agu 2025 - Present",
+      period: "Aug 2025 - Present",
       logo: "./Education/myctix-archive.jpg",
       description: "Created a digital learning platform on Notion for Binus Computer Science students, helping 100+ students with structured study materials.",
       tags: [
@@ -93,7 +93,7 @@ const Journey = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">My Journey</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mt-4">
-            My academic and organizational journey
+            My work and professional experience across various fields.
           </p>
         </div>
 
