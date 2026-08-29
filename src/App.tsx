@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Skills from './pages/Skills';
+import Education from './pages/Education';
 import Journey from './pages/Journey';
 import Achievement from './pages/Achievement';
 import Certificates from './pages/Certificates';
@@ -24,6 +25,7 @@ const App = () => {
       <main>
         <Home />
         <Skills />
+        <Education />
         <Journey />
         <Achievement />
         <Certificates />

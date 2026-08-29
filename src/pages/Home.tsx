@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, type Variants } from 'framer-motion';
+import './Home.css';
 
 const Home = () => {
   const [text, setText] = useState('');
@@ -78,21 +79,25 @@ const Home = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center lg:text-left"
           >
-            <div className="inline-block mb-4 mt-8">
+            {/* <div className="inline-block mb-4 mt-8">
               <span className="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold">
                 👋 Welcome to my portfolio
               </span>
-            </div>
+            </div> */}
+
+            <p className="text-2xl lg:text-4xl font-bold text-gray-900 italic mt-8">
+              <span className="gradient-text">Hello, I'm</span>
+            </p>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-4">
-              Hi, I'm <span className="gradient-text">Michael</span>
+              Michael Ahlovely Stevenson
             </h1>
 
             <h2 className="text-2xl lg:text-3xl text-gray-700 mb-2 font-medium">
               <span id="typingText">{text}</span>
             </h2>
 
-            <div className="flex lg:hidden justify-center my-8 fade-in-up">
+            <div className="flex lg:hidden justify-center my-8 fade-in-up mb-2">
               <div className="relative">
                 <div className="w-64 h-64 rounded-full overflow-hidden border-8 border-white shadow-xl">
                   <img src="./photo.jpg" alt="Michael Ahlovely Stevenson" className="w-full h-full object-cover" />
@@ -103,17 +108,18 @@ const Home = () => {
               </div>
             </div>
 
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Passionate about building innovative solutions and participating in hackathons.
-              Currently studying at Binus University with a GPA of 3.96.
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed leading-relaxed">
+              Passionate about building innovative solutions and participating in hackathons. 
+              Currently studying at Binus University with a GPA of 3.97.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="#contact" className="inline-flex items-center justify-center space-x-2 bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                <span>Get In Touch</span>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start group pointer-events-none">
+              <a href="#journey" className="pointer-events-auto inline-flex items-center justify-center space-x-2 border-2 border-black bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg group-hover:bg-transparent group-hover:text-black hover:!bg-black hover:!text-white">
+                <span>About Me</span>
                 <i className="fas fa-arrow-right"></i>
               </a>
-              <a href="#projects" className="inline-flex items-center justify-center space-x-2 border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg">
+
+              <a href="#projects" className="pointer-events-auto inline-flex items-center justify-center space-x-2 border-2 border-black bg-transparent text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:!bg-black hover:!text-white">
                 <span>View Projects</span>
                 <i className="fas fa-code"></i>
               </a>
@@ -121,18 +127,22 @@ const Home = () => {
 
             {/* Social Links */}
             <div className="flex gap-4 mt-8 justify-center lg:justify-start">
-              <a href="https://github.com/Mycticount-X" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-100 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+              <a href="https://github.com/Mycticount-X" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-100 hover:bg-gray-900 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                 <i className="fab fa-github text-xl"></i>
               </a>
-              <a href="https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-100 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+              <a href="https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-100 hover:bg-gray-900 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                 <i className="fab fa-linkedin-in text-xl"></i>
               </a>
-              <a href="https://www.instagram.com/michael23master" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-100 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+              <a href="mailto:mxlovers77@gmail.com" className="w-12 h-12 bg-gray-100 hover:bg-gray-900 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                <i className="fas fa-envelope text-xl"></i>
+              </a>
+              <a href="https://www.instagram.com/michael23master" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-100 hover:bg-gray-900 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                 <i className="fab fa-instagram text-xl"></i>
               </a>
-              <a href="https://www.youtube.com/@Mycticount_23X" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-100 hover:bg-blue-600 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+              <a href="https://www.youtube.com/@Mycticount_23X" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-100 hover:bg-gray-900 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                 <i className="fab fa-youtube text-xl"></i>
               </a>
+              
             </div>
           </motion.div>
 
@@ -161,9 +171,9 @@ const Home = () => {
           className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
         >
           {[
-            { value: '3.96', label: 'GPA' },
+            { value: '3.97', label: 'GPA' },
             { value: '30+', label: 'Projects' },
-            { value: '6+', label: 'Certificates' },
+            { value: '18+', label: 'Certificates' },
             { value: '4', label: 'Organizations' }
           ].map((stat, index) => (
             <motion.div 
