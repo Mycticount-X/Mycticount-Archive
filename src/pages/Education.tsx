@@ -186,7 +186,7 @@ const Education = () => {
           className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
         >
           <motion.div variants={cardVariants} className="lg:col-span-5 h-fit">
-            <div className="bg-white border border-gray-200 rounded-2xl shadow-lg p-8 w-full flex flex-col hover:shadow-xl transition-shadow duration-300">
+            <div className="card-hover bg-white border border-gray-200 rounded-2xl shadow-lg p-8 w-full flex flex-col hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center space-x-6 mb-6">
                 <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-blue-50 shadow-sm flex-shrink-0">
                   <img src={universityInfo.logo} alt={universityInfo.name} className="w-full h-full object-cover" />

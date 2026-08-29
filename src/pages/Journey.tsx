@@ -107,7 +107,7 @@ const Journey = () => {
               >
                 <div className="timeline-dot"></div>
                 
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 card-hover transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
                   <div className="flex flex-col md:flex-row gap-4">
                     <div className="shrink-0 flex justify-center md:justify-start">
                       <img
