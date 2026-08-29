@@ -5,11 +5,11 @@ const Journey = () => {
     {
       id: 1,
       institution: "Bina Nusantara IT Division",
-      role: "Assosiate Developer - Full Stack Developer",
+      role: "Associate Developer - Full Stack Developer",
       roleColor: "text-blue-600",
       period: "Jan 2026 - Present",
       logo: "./Education/itdiv.jpg",
-      description: "Currently pursuing Bachelor's degree in Computer Science with a GPA of 3.96. Specializing in artificial intelligence and software development.",
+      description: "Developing and maintaining scalable enterprise applications utilizing React and ASP.NET. Managing deployment pipelines via Azure DevOps while collaborating with cross-functional teams to deliver high-quality software solutions.",
       tags: [
         { text: "React", bgColor: "bg-purple-100", textColor: "text-purple-700" },
         { text: "ASP.NET", bgColor: "bg-green-100", textColor: "text-green-700" },
@@ -21,9 +21,9 @@ const Journey = () => {
       institution: "S-Class Binus",
       role: "Vice President",
       roleColor: "text-purple-600",
-      period: "Des 2024 - Present",
+      period: "Aug 2025 - Present",
       logo: "./Education/sclass.jpg",
-      description: "Serving as the Vice President of S-Class with a focus on Product Creation, leading initiatives in digital product development and actively participating in hackathons to drive innovative solutions.",
+      description: "As Vice President, I directed the overall operations of S-Class and oversaw three core divisions: Product Creation, Competition, and Research. I spearheaded major programs such as General Training and Gatherings, and successfully structured an active Discord community to foster engagement, seamless communication, and collaboration among high-achieving students.",
       tags: [
         { text: "SigmaLab", bgColor: "bg-red-100", textColor: "text-red-700" },
         { text: "Product Creation", bgColor: "bg-green-100", textColor: "text-green-700" }
@@ -36,7 +36,7 @@ const Journey = () => {
       roleColor: "text-teal-600",
       period: "Aug 2025 - Present",
       logo: "./Education/myctix-archive.jpg",
-      description: "Created a digital learning platform on Notion for Binus Computer Science students, helping 100+ students with structured study materials.",
+      description: "Founded and manage a comprehensive Notion-based learning platform tailored for Computer Science students. Curated structured study guides and course outlines, successfully supporting over 100 active users.",
       tags: [
         { text: "100+ Users", bgColor: "bg-teal-100", textColor: "text-teal-700" },
         { text: "4.9/5 Rating", bgColor: "bg-blue-100", textColor: "text-blue-700" }
@@ -47,11 +47,11 @@ const Journey = () => {
       institution: "Binus SLC",
       role: "Ex-Trainee Assistant Laboratory",
       roleColor: "text-green-600",
-      period: "Sep 2024 - Des 2024",
+      period: "Sep 2024 - Dec 2024",
       logo: "./Education/slc.jpg",
-      description: "Participated in Core Training and Pre-Training program at Binus University Student Laboratory Center.",
+      description: "Participated in Core Training and Pre-Training programs at Binus Software Laboratory Center, developing foundational skills in technical instruction, laboratory operations, and academic mentorship. Gained intensive hands-on experience across diverse technical domains, including Data Structures & Algorithms, Java/JavaFX, basic Full-Stack Development, Computer Vision, networking with Cisco Packet Tracer, and SQL/NoSQL databases (MySQL, MongoDB, SQLite).",
       tags: []
-    },
+    }
     
     // {
     //   id: 6,

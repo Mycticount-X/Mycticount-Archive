@@ -93,12 +93,12 @@ const Education = () => {
       roles: [
         {
           title: 'Vice President',
-          period: 'Jan 2026 - Present',
+          period: 'Aug 2025 - Present',
           description: <>As Vice President, I directed the overall operations of S-Class and oversaw three core divisions: <b>Product Creation, Competition, and Research</b>. I spearheaded major programs such as <b>General Training and Gatherings</b>, and successfully structured an active <b>Discord community</b> to foster engagement, seamless communication, and collaboration among high-achieving students.</>
         },
         {
           title: 'Member',
-          period: 'Aug 2025 - Jan 2026',
+          period: 'Dec 2024 - Aug 2025',
           description: <>During my time as a member, I actively participated in the <b>Product Creation Division</b>, focusing on developing end-to-end applications. I applied my software development skills to build innovative digital products and represented the organization in prestigious national hackathons, notably competing in <b>Microsoft elevAIte 2024</b> and <b>Gemastik 2025</b>.</>
         }
       ]
