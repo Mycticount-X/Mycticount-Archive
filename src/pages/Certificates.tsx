@@ -13,11 +13,65 @@ interface Certificate {
 const Certificates = () => {
   const certificatesData: Certificate[] = [
     {
+      id: "cert8",
+      title: "Microsoft Certified: Azure Fundamentals (AI-900)",
+      issuer: "Issued by Microsoft",
+      date: "March 2026",
+      description: "Certification for",
+      image: "/Certificates/microsoft-ai-900.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "cert7",
+      title: "UGM ASEAN Case Competition (UACC) 2026",
+      issuer: "Issued by Universitas Gadjah Mada",
+      date: "March 2026",
+      description: "",
+      image: "/Certificates/uacc.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "cert9",
+      title: "PayLabs x Alibaba Cloud Mini Hackathon",
+      issuer: "Issued by PayLabs and Alibaba Cloud",
+      date: "March 2026",
+      description: ".",
+      image: "/Certificates/paylabs-alibaba.png",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "certX",
+      title: "Certificate of Appreciation - Pantryon",
+      issuer: "Issued by S-Class Binus",
+      date: "July 2026",
+      description: ".",
+      image: "/Certificates/sc-pantryon.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "certX",
+      title: "PIC of Events - DSC Olympiad 2025",
+      issuer: "Issued by DSC Binus",
+      date: "January 2026",
+      description: ".",
+      image: "/Certificates/dsc-dsco.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "certX",
+      title: "Activist of Human Capital Departement",
+      issuer: "Issued by DSC Binus",
+      date: "January 2026",
+      description: ".",
+      image: "/Certificates/dsc-hc.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
       id: "cert1",
       title: "Nvidia Deep Learning",
       issuer: "Issued by Nvidia",
       date: "February 2025",
-      description: "Completed a Nvidia Workshop focused on deep learning fundamentals, including neural networks, convolutional networks, recurrent networks, and practical applications.",
+      description: "Completed an Onsite Nvidia Workshop focused on deep learning fundamentals, including neural networks, convolutional networks, recurrent networks, and practical applications.",
       image: "/nvidia.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
@@ -35,13 +89,13 @@ const Certificates = () => {
       title: "Crack The Shield Tournament",
       issuer: "Issued by CSC Binus",
       date: "June 2025",
-      description: "Competed in the prestigious Capture The Flag cybersecurity tournament by Cyber Security Community Binus, demonstrating skills in penetration testing and digital forensics.",
+      description: "Joined the prestigious Capture The Flag cybersecurity tournament by Cyber Security Community Binus, demonstrating skills in penetration testing and digital forensics.",
       image: "/ctf.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
       id: "cert4",
-      title: "PIC of Logistics",
+      title: "PIC of Logistics - DSC Welcoming Party 2025",
       issuer: "Issued by DSC Binus",
       date: "October 2025",
       description: "During the Welcoming Party 2025, I served as PIC of the Logistics Division, overseeing inventory, equipment, and food distribution while coordinating with other divisions to ensure smooth event operations.",
@@ -65,7 +119,7 @@ const Certificates = () => {
       description: "Awarded for exceptional operational management and logistical execution as the Person in Charge (PIC) of Logistics during the DSC Welcoming Party 2025.",
       image: "/outstanding.png",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
-    }
+    },
   ];
 
   return (
@@ -87,7 +141,6 @@ const Certificates = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
               className="card-hover bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-300 flex flex-col"
             >
               <div className="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden border-b border-gray-100">
@@ -104,8 +157,8 @@ const Certificates = () => {
                 <p className="text-sm text-gray-600 mb-2 flex-grow">{cert.description}</p>
                 
                 <div className="flex items-end justify-between mt-auto pt-4 border-t border-gray-100">
-                  <div className="flex flex-col">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">
+                  <div className="flex flex-col flex-1">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-blue-700 mb-1">
                       {cert.issuer}
                     </span>
                     <span className="text-sm font-bold text-gray-900">
@@ -117,7 +170,7 @@ const Certificates = () => {
                     href={cert.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors shadow-sm active:scale-95 inline-flex items-center"
+                    className="shrink-0 whitespace-nowrap bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors shadow-sm active:scale-95 inline-flex items-center"
                   >
                     View on LinkedIn
                   </a>
