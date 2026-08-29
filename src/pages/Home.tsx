@@ -108,7 +108,7 @@ const Home = () => {
               </div>
             </div>
 
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed leading-relaxed">
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Passionate about building innovative solutions and participating in hackathons. 
               Currently studying at Binus University with a GPA of 3.97.
             </p>
@@ -173,8 +173,8 @@ const Home = () => {
           {[
             { value: '3.97', label: 'GPA' },
             { value: '30+', label: 'Projects' },
-            { value: '18+', label: 'Certificates' },
-            { value: '4', label: 'Organizations' }
+            { value: '12+', label: 'Certificates' },
+            { value: '5', label: 'Organizations' }
           ].map((stat, index) => (
             <motion.div 
               key={index}
