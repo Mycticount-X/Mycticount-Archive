@@ -22,42 +22,33 @@ const Achievement = () => {
     },
     {
       id: 3,
-      title: "Ex-Trainee of SLC",
-      description: "Joined as a trainee laboratory assistant and participate in Core Training at Binus University Student Laboratory Center.",
-      image: "/aslab.jpg",
-      icon: "fas fa-user-graduate",
+      title: "Founder of Myctix Archive",
+      description: "A digital learning companion built on Notion, designed exclusively for Binus freshmen who want to master their courses with clarity, structure, and less stress.",
+      image: "/myctix-archive.jpeg",
+      icon: "fas fa-book",
       imgBg: "from-purple-50 to-purple-100",
       iconBg: "from-purple-400 to-purple-600"
     },
     {
       id: 4,
-      title: "App and Web Developer",
-      description: "Developed innovative applications showcased in various hackathons, demonstrating creativity and technical skills.",
-      image: "/hackathon.png",
-      icon: "fas fa-code",
-      imgBg: "from-indigo-50 to-indigo-100",
-      iconBg: "from-indigo-400 to-indigo-600"
+      title: "Ex-Trainee of SLC",
+      description: "Joined as a trainee laboratory assistant and participate in Core Training at Binus University Student Laboratory Center.",
+      image: "/aslab.jpg",
+      icon: "fas fa-user-graduate",
+      imgBg: "from-pink-50 to-pink-100",
+      iconBg: "from-pink-400 to-pink-600"
     },
     {
       id: 5,
-      title: "CTF Olympiad",
-      description: "Participated in prestigious Capture The Flag competitions, including Crack The Shield 2025 and National Cyber Week 2025.",
-      image: "/ctf.jpg",
-      icon: "fas fa-shield-alt",
-      imgBg: "from-red-50 to-red-100",
-      iconBg: "from-red-400 to-red-600"
+      title: "Event and Logistic Coordinator",
+      description: "Led major organisational events such as the DSC Olympiad and DSC Welcoming Party 2025, coordinating teams and ensuring smooth event execution.",
+      image: "/event.jpeg",
+      icon: "fas fa-people-carry",
+      imgBg: "from-green-50 to-green-100",
+      iconBg: "from-green-400 to-green-600"
     },
     {
       id: 6,
-      title: "Founder of Myctix Archive",
-      description: "A digital learning companion built on Notion, designed exclusively for Binus freshmen who want to master their courses with clarity, structure, and less stress.",
-      image: "/myctix-archive.jpeg",
-      icon: "fas fa-book",
-      imgBg: "from-teal-50 to-teal-100",
-      iconBg: "from-teal-400 to-teal-600"
-    },
-    {
-      id: 7,
       title: "Multi-Organization Involvement",
       description: "Actively contributed to four different organisations, taking on diverse roles that strengthened my leadership, collaboration, and project execution skills.",
       image: "/organisation.jpeg",
@@ -66,7 +57,7 @@ const Achievement = () => {
       iconBg: "from-orange-400 to-orange-600"
     },
     {
-      id: 8,
+      id: 7,
       title: "English Lecturer at TFI",
       description: "Served as a volunteer English lecturer at Teach for Indonesia, teaching and mentoring many young learners to improve their language skills.",
       image: "/teaching.jpg",
@@ -75,14 +66,23 @@ const Achievement = () => {
       iconBg: "from-pink-400 to-pink-600"
     },
     {
+      id: 8,
+      title: "CTF Olympiad",
+      description: "Participated in prestigious Capture The Flag competitions, including Crack The Shield 2025 and National Cyber Week 2025.",
+      image: "/ctf.jpg",
+      icon: "fas fa-shield-alt",
+      imgBg: "from-red-50 to-red-100",
+      iconBg: "from-red-400 to-red-600"
+    },
+    {
       id: 9,
-      title: "Event and Logistic Coordinator",
-      description: "Led major organisational events such as the DSC Olympiad and DSC Welcoming Party 2025, coordinating teams and ensuring smooth event execution.",
-      image: "/event.jpeg",
-      icon: "fas fa-people-carry",
-      imgBg: "from-green-50 to-green-100",
-      iconBg: "from-green-400 to-green-600"
-    }
+      title: "App and Web Developer",
+      description: "Developed innovative applications showcased in various hackathons, demonstrating creativity and technical skills.",
+      image: "/hackathon.png",
+      icon: "fas fa-code",
+      imgBg: "from-indigo-50 to-indigo-100",
+      iconBg: "from-indigo-400 to-indigo-600"
+    },
   ];
 
   const itemsPerPage = 6;
@@ -96,7 +96,15 @@ const Achievement = () => {
   }, [currentPage]);
 
   const goToPage = (page: number) => {
-    setCurrentPage(Math.min(Math.max(page, 1), totalPages));
+    const nextPage = Math.min(Math.max(page, 1), totalPages);
+    setCurrentPage(nextPage);
+
+    setTimeout(() => {
+      const achievementSection = document.getElementById('achievements');
+      if (achievementSection) {
+        achievementSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
   };
 
   return (
@@ -135,7 +143,6 @@ const Achievement = () => {
 
         {totalPages > 1 && (
           <div className="mt-6 flex flex-col gap-6">
-            
             <div className="flex items-center justify-center gap-2">
               <button
                 type="button"
@@ -191,9 +198,6 @@ const Achievement = () => {
                 </span>
               </button>
             </div>
-            <p className="text-sm text-gray-500 text-left">
-              Showing <span className="font-semibold text-gray-700">{(currentPage - 1) * itemsPerPage + 1}</span> - <span className="font-semibold text-gray-700">{Math.min(currentPage * itemsPerPage, achievementsData.length)}</span> of <span className="font-semibold text-gray-700">{achievementsData.length}</span>
-            </p>
           </div>
         )}
       </div>
