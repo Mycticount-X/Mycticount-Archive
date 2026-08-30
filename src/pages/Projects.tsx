@@ -4,11 +4,14 @@ interface ProjectItem {
   description: string;
   image: string;
   tags: { name: string; style: string }[];
-  link: string;
+  link?: string;
   demoLink?: string;
 }
 
 const ProjectCard = ({ project, index }: { project: ProjectItem; index: number }) => {
+  const projectButtonText = project.link ? (project.demoLink ? "Project" : "View Project") : "";
+  const demoButtonText = project.demoLink ? (project.link ? "Demo" : "View Demo") : "";
+
   return (
     <div 
       className="card-hover bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 fade-in-up flex flex-col h-full"
@@ -41,15 +44,17 @@ const ProjectCard = ({ project, index }: { project: ProjectItem; index: number }
         
         {/* Action Buttons */}
         <div className="flex flex-row gap-3 mt-auto">
-          <a 
-            href={project.link} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="flex-1 inline-flex justify-center items-center px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
-          >
-            <i className="fas fa-code mr-2"></i>
-            Project
-          </a>
+          {project.link && (
+            <a 
+              href={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex-1 inline-flex justify-center items-center px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+            >
+              <i className="fas fa-code mr-2"></i>
+              {projectButtonText}
+            </a>
+          )}
 
           {project.demoLink && (
             <a 
@@ -59,7 +64,7 @@ const ProjectCard = ({ project, index }: { project: ProjectItem; index: number }
               className="flex-1 inline-flex justify-center items-center px-4 py-2 bg-white text-gray-900 border border-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
             >
               <i className="fas fa-external-link-alt mr-2"></i>
-              Demo
+              {demoButtonText}
             </a>
           )}
         </div>
