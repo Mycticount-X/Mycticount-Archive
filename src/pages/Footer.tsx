@@ -26,7 +26,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-gray-100 uppercase tracking-wider text-sm">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6 text-gray-100 uppercase tracking-wider">Quick Links</h3>
             <ul className="space-y-4">
               {['Home', 'Journey', 'Certificates', 'Projects', 'Contact'].map((item) => (
                 <li key={item}>
@@ -41,14 +41,14 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-gray-100 uppercase tracking-wider text-sm">Resources</h3>
+            <h3 className="text-lg font-bold mb-6 text-gray-100 uppercase tracking-wider">Resources</h3>
             <ul className="space-y-4">
-              <li>
+              {/* <li>
                 <a href="https://myctix-archive.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center group">
                   <i className="fas fa-external-link-alt text-xs mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0"></i>
                   <span className="transform transition-transform duration-300 group-hover:translate-x-2">Myctix Archive</span>
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="./assets/CV_Michael.pdf" download className="text-gray-400 hover:text-white transition-colors flex items-center group">
                   <i className="fas fa-download text-xs mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0"></i>
