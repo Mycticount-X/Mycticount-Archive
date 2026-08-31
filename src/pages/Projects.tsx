@@ -78,7 +78,7 @@ const ProjectCard = ({ project, index }: { project: ProjectItem; index: number }
 const Projects = () => {
   const projectsData: ProjectItem[] = [
     {
-      id: 7,
+      id: 1,
       title: "Pantryon",
       description: "A cloud-based mobile inventory management app aimed at minimizing food waste through automatic reminders, expiry date recording, barcode scanning features, and intelligent recipe recommendations.",
       image: "./logo.jpg",
@@ -91,7 +91,7 @@ const Projects = () => {
       demoLink: "https://github.com/Mycticount-X/Pantryon-Mobile/releases"
     },
     {
-      id: 10,
+      id: 2,
       title: "Verilink",
       description: "A machine learning-powered web application designed to proactively detect malicious URLs and phishing threats using lexical feature analysis.",
       image: "./logo.jpg",
@@ -104,7 +104,7 @@ const Projects = () => {
       demoLink: "https://verilink-nine.vercel.app/"
     },
     {
-      id: 9,
+      id: 3,
       title: "Heart-Pulse",
       description: "A data-driven health application designed to predict and forecast cardiovascular risks over a 10-year trajectory.",
       image: "./logo.jpg",
@@ -114,10 +114,11 @@ const Projects = () => {
         { name: "FASTAPI", style: "bg-yellow-100 text-yellow-700" },
         { name: "Computer Vision", style: "bg-green-100 text-green-700" }
       ],
-      link: "https://github.com/Mycticount-X/Heart-Pulse"
+      link: "https://github.com/Mycticount-X/Heart-Pulse",
+      demoLink: "https://github.com/Mycticount-X/Heart-Pulse/releases"
     },
     {
-      id: 2,
+      id: 4,
       title: "Cychael of Energy",
       description: "A cloud-based mobile application designed to help users audit and optimize their household energy consumption efficiency.",
       image: "./logo.jpg",
@@ -130,7 +131,7 @@ const Projects = () => {
       link: "https://github.com/Joes131205/cychael-energy"
     },
     {
-      id: 11,
+      id: 5,
       title: "Intervon",
       description: "An AI-powered interview coach designed for real-time and objective job interview simulation.",
       image: "./logo.jpg",
@@ -145,7 +146,7 @@ const Projects = () => {
       link: "https://github.com/Mycticount-X/Intervon",
     },
     {
-      id: 8,
+      id: 6,
       title: "OncoCare",
       description: "An AI-powered medical platform utilizing Computer Vision and Deep Learning for precise breast cancer ultrasound image classification.",
       image: "./logo.jpg",
@@ -158,7 +159,7 @@ const Projects = () => {
       link: "https://github.com/Mycticount-X/OncoCare"
     },
     {
-      id: 1,
+      id: 7,
       title: "Myctix Archive",
       description: "A digital marketplace and resource hub for educational materials, integrated with Notion.",
       image: "./logo.jpg",
@@ -171,7 +172,7 @@ const Projects = () => {
       demoLink: "https://myctix-archive.vercel.app/"
     },
     {
-      id: 3,
+      id: 8,
       title: "Ocean Trade",
       description: "A specialized e-commerce platform designed to facilitate maritime asset trading and ship sales.",
       image: "./logo.jpg",
@@ -184,7 +185,7 @@ const Projects = () => {
       demoLink: "https://ocean-trade.vercel.app/"
     },
     {
-      id: 12,
+      id: 9,
       title: "RentCar",
       description: "A web-based car rental platform allowing users to browse, compare, and book vehicles from various providers.",
       image: "./logo.jpg",
@@ -195,7 +196,7 @@ const Projects = () => {
       link: "https://github.com/Mycticount-X/RentCar",
     },
     {
-      id: 4,
+      id: 10,
       title: "Gesture Deck",
       description: "A simple interactive rock paper scissors game controlled entirely by hand gestures using Computer Vision.",
       image: "./logo.jpg",
@@ -219,7 +220,7 @@ const Projects = () => {
     //   link: "https://github.com/Mycticount-X/Encryption-and-Decryption-Program"
     // },
     {
-      id: 6,
+      id: 11,
       title: "The Cnake",
       description: "A classic retro arcade game simulation running within a Command Line Interface (CLI) environment.",
       image: "./logo.jpg",
@@ -231,7 +232,7 @@ const Projects = () => {
       link: "https://github.com/Mycticount-X/The-Cnake"
     },
     {
-      id: 13,
+      id: 12,
       title: "MyctixFlow",
       description: "An interactive Kanban-style productivity tool offering extensive workflow customization and seamless drag-and-drop mechanics.",
       image: "./logo.jpg",
