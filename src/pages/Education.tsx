@@ -21,7 +21,7 @@ const Education = () => {
 
   const universityInfo = {
     name: 'Bina Nusantara University',
-    logo: './Education/binus.jpg',
+    logo: './Logo/binus.jpg',
     gpa: '3.97',
     streaming: 'Intelligent System',
     description: [
@@ -40,7 +40,7 @@ const Education = () => {
       id: 'dsc',
       name: 'Data Science Club',
       shortName: 'DSC',
-      logo: './Education/dsc.jpg',
+      logo: './Logo/dsc.jpg',
       currentPosition: 'PIC of Events and Logistics',
       roles: [
         { 
@@ -69,7 +69,7 @@ const Education = () => {
       id: 'himti',
       name: 'HIMTI (Himpunan Mahasiswa Teknik Informatika)',
       shortName: 'HIMTI',
-      logo: './Education/himti.jpg',
+      logo: './Logo/himti.jpg',
       currentPosition: 'Activist of Education',
       roles: [
         { 
@@ -88,7 +88,7 @@ const Education = () => {
       id: 'sclass',
       name: 'S-Class',
       shortName: 'S-Class',
-      logo: './Education/sclass.jpg',
+      logo: './Logo/sclass.jpg',
       currentPosition: 'Vice President',
       roles: [
         {
@@ -107,7 +107,7 @@ const Education = () => {
       id: 'slab',
       name: 'Sigma Lab',
       shortName: 'SLAB',
-      logo: './logo.jpg',
+      logo: './Logo/slab.png',
       currentPosition: 'General Coordinator',
       roles: [
         { 
@@ -126,7 +126,7 @@ const Education = () => {
       id: 'csc',
       name: 'Cyber Security Community',
       shortName: 'CSC',
-      logo: './Education/csc.jpg',
+      logo: './Logo/csc.jpg',
       currentPosition: 'Member',
       roles: [
         { 

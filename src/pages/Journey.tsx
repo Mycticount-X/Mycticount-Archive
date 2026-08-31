@@ -8,7 +8,7 @@ const Journey = () => {
       role: "Associate Developer - Full Stack Developer",
       roleColor: "text-blue-600",
       period: "Jan 2026 - Present",
-      logo: "./Education/itdiv.jpg",
+      logo: "./Logo/itdiv.jpg",
       description: "Developing and maintaining scalable enterprise applications utilizing React and ASP.NET. Managing deployment pipelines via Azure DevOps while collaborating with cross-functional teams to deliver high-quality software solutions.",
       tags: [
         { text: "React", bgColor: "bg-purple-100", textColor: "text-purple-700" },
@@ -22,7 +22,7 @@ const Journey = () => {
       role: "Vice President",
       roleColor: "text-purple-600",
       period: "Aug 2025 - Present",
-      logo: "./Education/sclass.jpg",
+      logo: "./Logo/sclass.jpg",
       description: "As Vice President, I directed the overall operations of S-Class and oversaw three core divisions: Product Creation, Competition, and Research. I spearheaded major programs such as General Training and Gatherings, and successfully structured an active Discord community to foster engagement, seamless communication, and collaboration among high-achieving students.",
       tags: [
         { text: "SigmaLab", bgColor: "bg-red-100", textColor: "text-red-700" },
@@ -35,7 +35,7 @@ const Journey = () => {
       role: "Founder",
       roleColor: "text-teal-600",
       period: "Aug 2025 - Present",
-      logo: "./Education/myctix-archive.jpg",
+      logo: "./Logo/myctix-archive.jpg",
       description: "Founded and manage a comprehensive Notion-based learning platform tailored for Computer Science students. Curated structured study guides and course outlines, successfully supporting over 100 active users.",
       tags: [
         { text: "100+ Users", bgColor: "bg-teal-100", textColor: "text-teal-700" },
@@ -48,7 +48,7 @@ const Journey = () => {
       role: "Ex-Trainee Assistant Laboratory",
       roleColor: "text-green-600",
       period: "Sep 2024 - Dec 2024",
-      logo: "./Education/slc.jpg",
+      logo: "./Logo/slc.jpg",
       description: "Participated in Core Training and Pre-Training programs at Binus Software Laboratory Center, developing foundational skills in technical instruction, laboratory operations, and academic mentorship. Gained intensive hands-on experience across diverse technical domains, including Data Structures & Algorithms, Java/JavaFX, basic Full-Stack Development, Computer Vision, networking with Cisco Packet Tracer, and SQL/NoSQL databases (MySQL, MongoDB, SQLite).",
       tags: []
     }
