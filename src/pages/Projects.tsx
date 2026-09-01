@@ -162,7 +162,7 @@ const Projects = () => {
       id: 7,
       title: "Myctix Archive",
       description: "A digital marketplace and resource hub for educational materials, integrated with Notion.",
-      image: "./logo.jpg",
+      image: "./Projects/myctix-archive-web.png",
       tags: [
         { name: "React", style: "bg-blue-100 text-blue-700" },
         { name: "Notion", style: "bg-gray-100 text-gray-700" },
@@ -173,9 +173,9 @@ const Projects = () => {
     },
     {
       id: 8,
-      title: "Ocean Trade",
+      title: "Ocean Deck",
       description: "A specialized e-commerce platform designed to facilitate maritime asset trading and ship sales.",
-      image: "./logo.jpg",
+      image: "./Projects/ocean-trade.jpg",
       tags: [
         { name: "HTML", style: "bg-red-100 text-red-700" },
         { name: "CSS", style: "bg-purple-100 text-purple-700" },
@@ -188,7 +188,7 @@ const Projects = () => {
       id: 9,
       title: "RentCar",
       description: "A web-based car rental platform allowing users to browse, compare, and book vehicles from various providers.",
-      image: "./logo.jpg",
+      image: "./Projects/rent-car.png",
       tags: [
         { name: "ASP.NET", style: "bg-blue-100 text-blue-700" },
         { name: "MySQL", style: "bg-yellow-100 text-yellow-700" },
@@ -199,7 +199,7 @@ const Projects = () => {
       id: 10,
       title: "Gesture Deck",
       description: "A simple interactive rock paper scissors game controlled entirely by hand gestures using Computer Vision.",
-      image: "./logo.jpg",
+      image: "./Projects/gesture-deck.png",
       tags: [
         { name: "Python", style: "bg-green-100 text-green-700" },
         { name: "OpenCV", style: "bg-blue-100 text-blue-700" },
