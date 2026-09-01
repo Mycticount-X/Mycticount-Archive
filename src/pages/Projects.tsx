@@ -81,7 +81,7 @@ const Projects = () => {
       id: 1,
       title: "Pantryon",
       description: "A cloud-based mobile inventory management app aimed at minimizing food waste through automatic reminders, expiry date recording, barcode scanning features, and intelligent recipe recommendations.",
-      image: "./logo.jpg",
+      image: "./Projects/pantryon.png",
       tags: [
         { name: "Flutter", style: "bg-blue-100 text-blue-700" },
         { name: "Supabase", style: "bg-teal-100 text-teal-700" },
@@ -92,22 +92,22 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Verilink",
-      description: "A machine learning-powered web application designed to proactively detect malicious URLs and phishing threats using lexical feature analysis.",
-      image: "./Projects/verilink.png",
+      title: "Cychael of Energy",
+      description: "A cloud-based mobile application designed to help users audit and optimize their household energy consumption efficiency.",
+      image: "./Projects/cychael-energy.png",
       tags: [
-        { name: "React", style: "bg-blue-100 text-blue-700" },
-        { name: "FASTAPI", style: "bg-yellow-100 text-yellow-700" },
-        { name: "Machine Learning", style: "bg-green-100 text-green-700" }
+        { name: "React Native", style: "bg-blue-100 text-blue-700" },
+        { name: "Firebase", style: "bg-orange-100 text-orange-700" },
+        { name: "EAS Build", style: "bg-gray-100 text-gray-700" },
+        // { name: "Gen-AI", style: "bg-green-100 text-green-700" },
       ],
-      link: "https://github.com/Mycticount-X/Verilink",
-      demoLink: "https://verilink-nine.vercel.app/"
+      link: "https://github.com/Joes131205/cychael-energy"
     },
     {
       id: 3,
       title: "Heart-Pulse",
       description: "A data-driven health application designed to predict and forecast cardiovascular risks over a 10-year trajectory.",
-      image: "./logo.jpg",
+      image: "./Projects/heart-pulse.png",
       tags: [
         { name: "Flutter", style: "bg-blue-100 text-blue-700" },
         { name: "Supabase", style: "bg-teal-100 text-teal-700" },
@@ -119,19 +119,6 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Cychael of Energy",
-      description: "A cloud-based mobile application designed to help users audit and optimize their household energy consumption efficiency.",
-      image: "./logo.jpg",
-      tags: [
-        { name: "React Native", style: "bg-blue-100 text-blue-700" },
-        { name: "Firebase", style: "bg-orange-100 text-orange-700" },
-        { name: "EAS Build", style: "bg-gray-100 text-gray-700" },
-        // { name: "Gen-AI", style: "bg-green-100 text-green-700" },
-      ],
-      link: "https://github.com/Joes131205/cychael-energy"
-    },
-    {
-      id: 5,
       title: "Intervon",
       description: "An AI-powered interview coach designed for real-time and objective job interview simulation.",
       image: "./logo.jpg",
@@ -144,6 +131,19 @@ const Projects = () => {
         { name: "Whisper", style: "bg-emerald-100 text-emerald-700" },
       ],
       link: "https://github.com/Mycticount-X/Intervon",
+    },
+    {
+      id: 5,
+      title: "Verilink",
+      description: "A machine learning-powered web application designed to proactively detect malicious URLs and phishing threats using lexical feature analysis.",
+      image: "./Projects/verilink.png",
+      tags: [
+        { name: "React", style: "bg-blue-100 text-blue-700" },
+        { name: "FASTAPI", style: "bg-yellow-100 text-yellow-700" },
+        { name: "Machine Learning", style: "bg-green-100 text-green-700" }
+      ],
+      link: "https://github.com/Mycticount-X/Verilink",
+      demoLink: "https://verilink-nine.vercel.app/"
     },
     {
       id: 6,
