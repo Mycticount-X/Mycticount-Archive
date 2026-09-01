@@ -223,7 +223,7 @@ const Projects = () => {
       id: 11,
       title: "The Cnake",
       description: "A classic retro arcade game simulation running within a Command Line Interface (CLI) environment.",
-      image: "./logo.jpg",
+      image: "./Projects/cnake-poster.png",
       tags: [
         { name: "C", style: "bg-blue-100 text-blue-700" },
         { name: "CLI", style: "bg-gray-100 text-gray-700" },
@@ -235,7 +235,7 @@ const Projects = () => {
       id: 12,
       title: "MyctixFlow",
       description: "An interactive Kanban-style productivity tool offering extensive workflow customization and seamless drag-and-drop mechanics.",
-      image: "./logo.jpg",
+      image: "./Projects/myctix-flow.png",
       tags: [
         { name: "React", style: "bg-blue-100 text-blue-700" },
       ],
