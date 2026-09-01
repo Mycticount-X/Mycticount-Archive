@@ -94,7 +94,7 @@ const Projects = () => {
       id: 2,
       title: "Verilink",
       description: "A machine learning-powered web application designed to proactively detect malicious URLs and phishing threats using lexical feature analysis.",
-      image: "./logo.jpg",
+      image: "./Projects/verilink.png",
       tags: [
         { name: "React", style: "bg-blue-100 text-blue-700" },
         { name: "FASTAPI", style: "bg-yellow-100 text-yellow-700" },
