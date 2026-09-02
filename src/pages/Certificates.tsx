@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useMemo, useState } from 'react';
+import { certificateCardVariants, headerVariants, sectionVariants } from '../motion/motion-style';
 
 interface Certificate {
   id: string;
@@ -150,22 +151,35 @@ const Certificates = () => {
   return (
     <section id="certificates" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in-up">
+        <motion.div
+          className="text-center mb-16"
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+        >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Certificates</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mt-4">
             Professional certifications and achievements
           </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </motion.div>
+
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+        >
           {currentItems.map((cert, index) => (
-            <motion.div 
-              key={cert.id} 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+            <motion.div
+              key={cert.id}
+              variants={certificateCardVariants}
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="card-hover bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-300 flex flex-col"
             >
               <div className="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden border-b border-gray-100">
@@ -203,7 +217,7 @@ const Certificates = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {totalPages > 1 && (
           <div className="mt-6 flex flex-col gap-6">

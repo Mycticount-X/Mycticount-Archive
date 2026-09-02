@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion, type Variants } from 'framer-motion';
-import './Home.css';
 
 const Home = () => {
   const [text, setText] = useState('');

@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion';
+import { cardVariants, headerVariants, sectionVariants } from '../motion/motion-style';
+
 const Skills = () => {
   const technicalSkills = [
     {
@@ -98,22 +101,36 @@ const Skills = () => {
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <div className="text-center mb-16 fade-in-up">
+        <motion.div
+          className="text-center mb-16"
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+        >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Skills & Technologies</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
             A comprehensive overview of my technical expertise and tools I use to build digital solutions.
           </p>
-        </div>
+        </motion.div>
 
         {/* Technical Skills Section */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+        >
           {technicalSkills.map((category, index) => (
-            <div 
+            <motion.div
               key={index}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
+              variants={cardVariants}
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-50px' }}
               className="group relative bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden"
             >
               <div className={`absolute -right-16 -top-16 w-32 h-32 bg-gradient-to-br ${category.gradient} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
@@ -135,9 +152,9 @@ const Skills = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Soft Skills Section */}
         {/* <div className="mt-12" data-aos="fade-up" data-aos-offset="0">

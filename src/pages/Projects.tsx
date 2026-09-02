@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
+import { cardVariants, headerVariants, sectionVariants } from "../motion/motion-style";
 
 interface ProjectItem {
   id: number;
@@ -15,9 +17,13 @@ const ProjectCard = ({ project, index }: { project: ProjectItem; index: number }
   const demoButtonText = project.demoLink ? (project.link ? "Demo" : "View Demo") : "";
 
   return (
-    <div 
-      className="card-hover bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 fade-in-up flex flex-col h-full"
-      style={{ animationDelay: `${index * 0.1}s` }}
+    <motion.div
+      variants={cardVariants}
+      custom={index}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: '-50px' }}
+      className="card-hover bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 flex flex-col h-full"
     >
       <div className="h-64 w-full bg-gray-100 overflow-hidden relative group shrink-0">
         <img 
@@ -71,7 +77,7 @@ const ProjectCard = ({ project, index }: { project: ProjectItem; index: number }
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -269,24 +275,35 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="text-center mb-16 fade-in-up">
+        <motion.div
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mt-4">
             Some of my recent work and projects
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {currentItems.map((project, index) => (
-            <ProjectCard 
-              key={project.id} 
-              project={project} 
-              index={index} 
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={index}
             />
           ))}
-        </div>
+        </motion.div>
 
         {totalPages > 1 && (
           <div className="mt-6 flex flex-col gap-6">
