@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useMemo, useState } from 'react';
 
 interface Certificate {
   id: string;
@@ -11,87 +12,140 @@ interface Certificate {
 }
 
 const Certificates = () => {
-  const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const itemsPerPage = 6;
+  const [currentPage, setCurrentPage] = useState(1);
 
   const certificatesData: Certificate[] = [
     {
-      id: "cert1",
+      id: "1",
+      title: "Microsoft Certified: Azure Fundamentals (AI-900)",
+      issuer: "Issued by Microsoft",
+      date: "March 2026",
+      description: "Passed the Microsoft AI-900 Certification Exam, demonstrating foundational knowledge of Artificial Intelligence and Microsoft Azure AI services. The certification validates core competencies in machine learning concepts, Natural Language Processing (NLP), Computer Vision, AI ethics, and practical cloud-based AI applications.",
+      image: "/Certificates/microsoft-ai-900.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "2",
+      title: "UGM ASEAN Case Competition (UACC) 2026",
+      issuer: "Issued by Universitas Gadjah Mada",
+      date: "March 2026",
+      description: "Competed in the UGM ASEAN Case Competition (UACC) 2026 as a member of 'Team ResiliASEAN'. Demonstrated strong analytical, problem-solving, and strategic thinking skills by developing comprehensive and innovative solutions for complex business cases within the Southeast Asian regional context.",
+      image: "/Certificates/uacc.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "3",
+      title: "PayLabs x Alibaba Cloud Mini Hackathon",
+      issuer: "Issued by PayLabs and Alibaba Cloud",
+      date: "March 2026",
+      description: "Participated in the PayLabs x Alibaba Cloud Mini Hackathon and developed 'HoverPay', an innovative biometric payment application. The system utilizes palm vein pattern recognition for secure transactions, fully integrated with the PayLabs Payment Gateway to provide a seamless and contactless user experience.",
+      image: "/Certificates/paylabs-alibaba.png",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "4",
+      title: "Certificate of Appreciation - Pantryon",
+      issuer: "Issued by S-Class Binus",
+      date: "July 2026",
+      description: "Awarded by S-Class Binus in recognition of active contributions and technical involvement in the development of 'Pantryon', an innovative digital product creation initiative.",
+      image: "/Certificates/sc-pantryon.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "5",
+      title: "PIC of Events - DSC Olympiad 2025",
+      issuer: "Issued by DSC Binus",
+      date: "January 2026",
+      description: "During the DSC Olympiad 2025, I served as the PIC of the Event Division, responsible for planning the overall flow, managing timelines, and supervising on-site execution to ensure a seamless and engaging competition.",
+      image: "/Certificates/dsc-dsco.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "6",
+      title: "Activist of Human Capital Departement",
+      issuer: "Issued by DSC Binus",
+      date: "January 2026",
+      description: "As an Activist in the Human Capital Division, I facilitated member recruitment, internal training, and engagement programs, helping to build a supportive environment where members could maximize their technical and interpersonal potential.",
+      image: "/Certificates/dsc-hc.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "7",
       title: "Nvidia Deep Learning",
       issuer: "Issued by Nvidia",
       date: "February 2025",
-      description: "Comprehensive course covering neural networks, convolutional networks, recurrent networks, and deep learning applications.",
+      description: "Completed an Onsite Nvidia Workshop focused on deep learning fundamentals, including neural networks, convolutional networks, recurrent networks, and practical applications.",
       image: "/nvidia.jpg",
-      link: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "cert2",
+      id: "8",
       title: "Microsoft Azure AI Fundamental",
-      issuer: "Issued by Microsoft",
+      issuer: "Issued by GreatNusa and Microsoft",
       date: "April 2025",
-      description: "Fundamentals of Artificial Intelligence including machine learning concepts, AI ethics, and practical applications.",
+      description: "Completed the Microsoft Azure AI Fundamentals course, gaining knowledge of artificial intelligence concepts and how to implement AI solutions using Microsoft Azure services.",
       image: "/microsoft.jpg",
-      link: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "cert3",
+      id: "9",
       title: "Crack The Shield Tournament",
       issuer: "Issued by CSC Binus",
       date: "June 2025",
-      description: "Competed in the prestigious Capture The Flag cybersecurity tournament, demonstrating skills in penetration testing and digital forensics.",
+      description: "Joined the prestigious Capture The Flag cybersecurity tournament by Cyber Security Community Binus, demonstrating skills in penetration testing and digital forensics.",
       image: "/ctf.jpg",
-      link: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "cert4",
-      title: "PIC of Logistics",
+      id: "10",
+      title: "PIC of Logistics - DSC Welcoming Party 2025",
       issuer: "Issued by DSC Binus",
       date: "October 2025",
-      description: "Person in Charge certification for logistics management, covering supply chain optimization, inventory management, and distribution strategies during DSC Welcoming Party 2025.",
+      description: "During the Welcoming Party 2025, I served as PIC of the Logistics Division, overseeing inventory, equipment, and food distribution while coordinating with other divisions to ensure smooth event operations.",
       image: "/pic-log.jpg",
-      link: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "cert5",
-      title: "DONGKER Certificate",
+      id: "11",
+      title: "Committee of DONGKER DSC 2025",
       issuer: "Issued by DSC Binus",
       date: "February 2025",
-      description: "Volunteering on Delegasi Outline Program Kerja (DONGKER) DSC 2025",
+      description: "Coordinated the official inauguration and handover ceremony for the Data Science Club, Delegasi Outline Program Kerja (DONGKER), ensuring a seamless leadership transition and honoring the contributions of the outgoing board.",
       image: "/dongker.jpeg",
-      link: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "cert6",
+      id: "12",
       title: "Outstanding Performance on DSC Welcoming Party",
       issuer: "Issued by DSC Binus",
       date: "October 2025",
-      description: "Certificate of having Outstanding Performance on DSC Welcoming Party 2025",
+      description: "Awarded for exceptional operational management and logistical execution as the Person in Charge (PIC) of Logistics during the DSC Welcoming Party 2025.",
       image: "/outstanding.png",
-      link: "https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/details/certifications/"
-    }
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
   ];
 
-  const openModal = (cert: Certificate) => {
-    setSelectedCert(cert);
-    setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
+  const totalPages = Math.ceil(certificatesData.length / itemsPerPage);
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setTimeout(() => setSelectedCert(null), 300); 
-    document.body.style.overflow = 'auto'; 
-  };
+  const currentItems = useMemo(() => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    return certificatesData.slice(startIndex, startIndex + itemsPerPage);
+  }, [currentPage]);
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isModalOpen) {
-        closeModal();
+  const goToPage = (page: number) => {
+    const nextPage = Math.min(Math.max(page, 1), totalPages);
+    if (nextPage === currentPage) return;
+
+    setCurrentPage(nextPage);
+
+    setTimeout(() => {
+      const certificateSection = document.getElementById('certificates');
+      if (certificateSection) {
+        certificateSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isModalOpen]);
+    }, 100);
+  };
 
   return (
     <section id="certificates" className="py-20 bg-white">
@@ -105,81 +159,101 @@ const Certificates = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certificatesData.map((cert, index) => (
-            <div 
+          {currentItems.map((cert, index) => (
+            <motion.div 
               key={cert.id} 
-              className="certificate-card card-hover bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-2xl fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="card-hover bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-300 flex flex-col"
             >
-              <div className="relative h-48 overflow-hidden group">
+              <div className="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden border-b border-gray-100">
                 <img 
                   src={cert.image} 
                   alt={cert.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                  className="w-full h-full object-cover" 
                 />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <button 
-                    onClick={() => openModal(cert)}
-                    className="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300"
-                  >
-                    <i className="fas fa-eye mr-2"></i>View
-                  </button>
-                </div>
               </div>
               
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{cert.title}</h3>
-                <p className="text-gray-600 text-sm mb-3">{cert.issuer}</p>
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium
-                  ${cert.date.includes('2025') && !cert.date.includes('October') ? 'bg-blue-100 text-blue-700' : 
-                    cert.date.includes('October') ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'}`}>
-                  {cert.date}
-                </span>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{cert.title}</h3>
+                
+                <p className="text-sm text-gray-600 mb-2 flex-grow">{cert.description}</p>
+                
+                <div className="flex items-end justify-between mt-auto pt-4 border-t border-gray-100">
+                  <div className="flex flex-col flex-1">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-blue-700 mb-1">
+                      {cert.issuer}
+                    </span>
+                    <span className="text-sm font-bold text-gray-900">
+                      {cert.date}
+                    </span>
+                  </div>
+
+                  <a 
+                    href={cert.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="shrink-0 whitespace-nowrap bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors shadow-sm active:scale-95 inline-flex items-center"
+                  >
+                    View on LinkedIn
+                  </a>
+                </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
 
-      {isModalOpen && selectedCert && (
-        <div 
-          className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/80 transition-opacity duration-300"
-          onClick={closeModal} 
-        >
-          <div 
-            className="bg-white rounded-2xl max-w-4xl w-full mx-4 overflow-hidden relative animate-[modalOpen_0.3s_ease]"
-            onClick={(e) => e.stopPropagation()} 
-          >
-            <button 
-              className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 hover:bg-gray-100 rounded-full flex items-center justify-center transition-all shadow-md" 
-              onClick={closeModal}
-            >
-              <i className="fas fa-times text-gray-600"></i>
-            </button>
-            
-            <div className="grid md:grid-cols-2">
-              <div className="bg-gray-100 h-64 md:h-auto flex items-center justify-center p-4">
-                <img src={selectedCert.image} alt="Certificate" className="max-w-full max-h-[500px] object-contain shadow-sm" />
-              </div>
-              <div className="p-8 flex flex-col justify-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{selectedCert.title}</h3>
-                <p className="text-gray-600 mb-2">{selectedCert.issuer}</p>
-                <p className="text-blue-600 font-medium mb-4">{selectedCert.date}</p>
-                <p className="text-gray-700 leading-relaxed mb-8">{selectedCert.description}</p>
-                <a 
-                  href={selectedCert.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors self-start"
+        {totalPages > 1 && (
+          <div className="mt-6 flex flex-col gap-6">
+            <div className="flex items-center justify-center gap-2">
+              <button
+                type="button"
+                onClick={() => goToPage(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="group px-4 py-2 rounded-md border border-gray-300 text-gray-700 transition-all duration-200 ease-out hover:bg-gray-100 hover:border-blue-600 hover:text-blue-600 hover:-translate-x-0.5 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-x-0"
+              >
+                <span className="inline-block transition-transform duration-200 group-hover:-translate-x-0.5 group-hover:text-blue-600">
+                  ← Previous
+                </span>
+              </button>
+
+              {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+                <button
+                  key={page}
+                  type="button"
+                  onClick={() => goToPage(page)}
+                  className={`relative w-10 h-10 rounded-md border font-medium transition-all duration-300 ease-out hover:scale-110 active:scale-95 ${
+                    currentPage === page
+                      ? 'bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-200 scale-110'
+                      : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100 hover:border-blue-300'
+                  }`}
                 >
-                  <i className="fas fa-external-link-alt"></i>
-                  <span>View on LinkedIn</span>
-                </a>
-              </div>
+                  {page}
+                  {currentPage === page && (
+                    <span
+                      key={`ping-${currentPage}`}
+                      className="absolute inset-0 rounded-md border-2 border-blue-400 animate-[ping_0.6s_ease-out_1]"
+                    />
+                  )}
+                </button>
+              ))}
+
+              <button
+                type="button"
+                onClick={() => goToPage(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="group px-4 py-2 rounded-md border border-gray-300 text-gray-700 transition-all duration-200 ease-out hover:bg-gray-100 hover:border-blue-600 hover:text-blue-600 hover:translate-x-0.5 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-x-0"
+              >
+                <span className="inline-block transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-blue-600">
+                  Next →
+                </span>
+              </button>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </section>
   );
 };

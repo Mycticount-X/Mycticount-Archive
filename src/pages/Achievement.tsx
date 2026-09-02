@@ -1,3 +1,5 @@
+import { useMemo, useState } from 'react';
+
 const Achievement = () => {
   const achievementsData = [
     {
@@ -20,42 +22,33 @@ const Achievement = () => {
     },
     {
       id: 3,
-      title: "Ex-Trainee of SLC",
-      description: "Joined as a trainee laboratory assistant and participate in Core Training at Binus University Student Laboratory Center.",
-      image: "/aslab.jpg",
-      icon: "fas fa-user-graduate",
+      title: "Founder of Myctix Archive",
+      description: "A digital learning companion built on Notion, designed exclusively for Binus freshmen who want to master their courses with clarity, structure, and less stress.",
+      image: "/myctix-archive.jpeg",
+      icon: "fas fa-book",
       imgBg: "from-purple-50 to-purple-100",
       iconBg: "from-purple-400 to-purple-600"
     },
     {
       id: 4,
-      title: "App and Web Developer",
-      description: "Developed innovative applications showcased in various hackathons, demonstrating creativity and technical skills.",
-      image: "/hackathon.png",
-      icon: "fas fa-code",
-      imgBg: "from-indigo-50 to-indigo-100",
-      iconBg: "from-indigo-400 to-indigo-600"
+      title: "Ex-Trainee of SLC",
+      description: "Joined as a trainee laboratory assistant and participate in Core Training at Binus University Student Laboratory Center.",
+      image: "/aslab.jpg",
+      icon: "fas fa-user-graduate",
+      imgBg: "from-pink-50 to-pink-100",
+      iconBg: "from-pink-400 to-pink-600"
     },
     {
       id: 5,
-      title: "CTF Olympiad",
-      description: "Participated in prestigious Capture The Flag competitions, including Crack The Shield 2025 and National Cyber Week 2025.",
-      image: "/ctf.jpg",
-      icon: "fas fa-shield-alt",
-      imgBg: "from-red-50 to-red-100",
-      iconBg: "from-red-400 to-red-600"
+      title: "Event and Logistic Coordinator",
+      description: "Led major organisational events such as the DSC Olympiad and DSC Welcoming Party 2025, coordinating teams and ensuring smooth event execution.",
+      image: "/event.jpeg",
+      icon: "fas fa-people-carry",
+      imgBg: "from-green-50 to-green-100",
+      iconBg: "from-green-400 to-green-600"
     },
     {
       id: 6,
-      title: "Founder of Myctix Archive",
-      description: "A digital learning companion built on Notion, designed exclusively for Binus freshmen who want to master their courses with clarity, structure, and less stress.",
-      image: "/myctix-archive.jpeg",
-      icon: "fas fa-book",
-      imgBg: "from-teal-50 to-teal-100",
-      iconBg: "from-teal-400 to-teal-600"
-    },
-    {
-      id: 7,
       title: "Multi-Organization Involvement",
       description: "Actively contributed to four different organisations, taking on diverse roles that strengthened my leadership, collaboration, and project execution skills.",
       image: "/organisation.jpeg",
@@ -64,7 +57,7 @@ const Achievement = () => {
       iconBg: "from-orange-400 to-orange-600"
     },
     {
-      id: 8,
+      id: 7,
       title: "English Lecturer at TFI",
       description: "Served as a volunteer English lecturer at Teach for Indonesia, teaching and mentoring many young learners to improve their language skills.",
       image: "/teaching.jpg",
@@ -73,15 +66,46 @@ const Achievement = () => {
       iconBg: "from-pink-400 to-pink-600"
     },
     {
+      id: 8,
+      title: "CTF Olympiad",
+      description: "Participated in prestigious Capture The Flag competitions, including Crack The Shield 2025 and National Cyber Week 2025.",
+      image: "/ctf.jpg",
+      icon: "fas fa-shield-alt",
+      imgBg: "from-red-50 to-red-100",
+      iconBg: "from-red-400 to-red-600"
+    },
+    {
       id: 9,
-      title: "Event and Logistic Coordinator",
-      description: "Led major organisational events such as the DSC Olympiad and DSC Welcoming Party 2025, coordinating teams and ensuring smooth event execution.",
-      image: "/event.jpeg",
-      icon: "fas fa-people-carry",
-      imgBg: "from-green-50 to-green-100",
-      iconBg: "from-green-400 to-green-600"
-    }
+      title: "App and Web Developer",
+      description: "Developed innovative applications showcased in various hackathons, demonstrating creativity and technical skills.",
+      image: "/hackathon.png",
+      icon: "fas fa-code",
+      imgBg: "from-indigo-50 to-indigo-100",
+      iconBg: "from-indigo-400 to-indigo-600"
+    },
   ];
+
+  const itemsPerPage = 6;
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(achievementsData.length / itemsPerPage);
+
+  const currentItems = useMemo(() => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    return achievementsData.slice(startIndex, startIndex + itemsPerPage);
+  }, [currentPage]);
+
+  const goToPage = (page: number) => {
+    const nextPage = Math.min(Math.max(page, 1), totalPages);
+    setCurrentPage(nextPage);
+
+    setTimeout(() => {
+      const achievementSection = document.getElementById('achievements');
+      if (achievementSection) {
+        achievementSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
 
   return (
     <section id="achievements" className="py-20 bg-gray-50">
@@ -95,19 +119,17 @@ const Achievement = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {achievementsData.map((item, index) => (
+          {currentItems.map((item, index) => (
             <div 
               key={item.id} 
               className="card-hover bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-200 fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Gambar dengan Background Gradien Dinamis */}
               <div className={`h-48 bg-gradient-to-br ${item.imgBg} flex items-center justify-center overflow-hidden border-b border-gray-200`}>
                 <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
               </div>
               
               <div className="p-6">
-                {/* Ikon dengan Background Gradien Dinamis */}
                 <div className={`w-12 h-12 bg-gradient-to-br ${item.iconBg} rounded-lg flex items-center justify-center mb-4`}>
                   <i className={`${item.icon} text-white text-xl`}></i>
                 </div>
@@ -118,6 +140,66 @@ const Achievement = () => {
             </div>
           ))}
         </div>
+
+        {totalPages > 1 && (
+          <div className="mt-6 flex flex-col gap-6">
+            <div className="flex items-center justify-center gap-2">
+              <button
+                type="button"
+                onClick={() => goToPage(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="group px-4 py-2 rounded-md border border-gray-300 text-gray-700 
+                          transition-all duration-200 ease-out
+                          hover:bg-gray-100 hover:border-blue-600 hover:text-blue-600 hover:-translate-x-0.5
+                          active:scale-95
+                          disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-x-0"
+              >
+                <span className="inline-block transition-transform duration-200 group-hover:-translate-x-0.5 group-hover:text-blue-600">
+                  ← Previous
+                </span>
+              </button>
+
+              {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+                <button
+                  key={page}
+                  type="button"
+                  onClick={() => goToPage(page)}
+                  className={`relative w-10 h-10 rounded-md border font-medium
+                              transition-all duration-300 ease-out
+                              hover:scale-110 active:scale-95
+                              ${
+                                currentPage === page
+                                  ? 'bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-200 scale-110'
+                                  : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100 hover:border-blue-300'
+                              }`}
+                >
+                  {page}
+                  {currentPage === page && (
+                    <span
+                      key={`ping-${currentPage}`}
+                      className="absolute inset-0 rounded-md border-2 border-blue-400 animate-[ping_0.6s_ease-out_1]"
+                    />
+                  )}
+                </button>
+              ))}
+
+              <button
+                type="button"
+                onClick={() => goToPage(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="group px-4 py-2 rounded-md border border-gray-300 text-gray-700 
+                          transition-all duration-200 ease-out
+                          hover:bg-gray-100 hover:border-blue-600 hover:text-blue-600 hover:translate-x-0.5
+                          active:scale-95
+                          disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-x-0"
+              >
+                <span className="inline-block transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-blue-600">
+                  Next →
+                </span>
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
