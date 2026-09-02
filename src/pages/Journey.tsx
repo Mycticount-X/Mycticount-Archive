@@ -51,6 +51,16 @@ const Journey = () => {
       logo: "./Logo/slc.jpg",
       description: "Participated in Core Training and Pre-Training programs at Binus Software Laboratory Center, developing foundational skills in technical instruction, laboratory operations, and academic mentorship. Gained intensive hands-on experience across diverse technical domains, including Data Structures & Algorithms, Java/JavaFX, basic Full-Stack Development, Computer Vision, networking with Cisco Packet Tracer, and SQL/NoSQL databases (MySQL, MongoDB, SQLite).",
       tags: []
+    },
+    {
+      id: 5,
+      institution: "Bina Nusantara University",
+      role: "BINUS Ambassador",
+      roleColor: "text-blue-600",
+      period: "Jun 2023 - Jun 2024",
+      logo: "./Logo/binus.jpg",
+      description: "As a Binus Ambassador at BINUS University, I represented the university in various academic, social, and promotional activities aimed at strengthening BINUS's image and engagement with prospective students. My responsibilities included doing promotion and providing insights about campus life and academic programs. Through this role, I honed my communication and interpersonal skills while building a strong sense of professionalism and school pride.",
+      tags: []
     }
     
     // {
