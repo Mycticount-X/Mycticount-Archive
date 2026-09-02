@@ -1,4 +1,6 @@
 import './Journey.css';
+import { motion } from 'framer-motion';
+import { headerVariants, itemVariants, sectionVariants } from '../motion/motion-style';
 
 const Journey = () => {
   const journeyData = [
@@ -97,26 +99,34 @@ const Journey = () => {
   ];
 
   return (
-    <section id="journey" className="py-20 bg-white">
+    <motion.section
+      id="journey"
+      className="py-20 bg-white"
+      variants={sectionVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: '-50px' }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in-up">
+        <motion.div className="text-center mb-16" variants={headerVariants}>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">My Journey</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mt-4">
             My work and professional experience across various fields.
           </p>
-        </div>
+        </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-12">
+          <motion.div className="space-y-12" variants={sectionVariants}>
             {journeyData.map((item, index) => (
-              <div 
-                key={item.id} 
-                className="timeline-item fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+              <motion.div
+                key={item.id}
+                className="timeline-item"
+                variants={itemVariants}
+                custom={index}
               >
                 <div className="timeline-dot"></div>
-                
+
                 <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 card-hover transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
                   <div className="flex flex-col md:flex-row gap-4">
                     <div className="shrink-0 flex justify-center md:justify-start">
@@ -153,12 +163,12 @@ const Journey = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
