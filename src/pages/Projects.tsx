@@ -149,7 +149,7 @@ const Projects = () => {
       id: 6,
       title: "OncoCare",
       description: "An AI-powered medical platform utilizing Computer Vision and Deep Learning for precise breast cancer ultrasound image classification.",
-      image: "./logo.jpg",
+      image: "./Projects/oncocare.png",
       tags: [
         { name: "React", style: "bg-blue-100 text-blue-700" },
         { name: "Supabase", style: "bg-teal-100 text-teal-700" },
