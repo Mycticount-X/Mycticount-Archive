@@ -112,7 +112,7 @@ const Projects = () => {
         { name: "Flutter", style: "bg-blue-100 text-blue-700" },
         { name: "Supabase", style: "bg-teal-100 text-teal-700" },
         { name: "FASTAPI", style: "bg-yellow-100 text-yellow-700" },
-        { name: "Computer Vision", style: "bg-green-100 text-green-700" }
+        { name: "Machine Learning", style: "bg-green-100 text-green-700" }
       ],
       link: "https://github.com/Mycticount-X/Heart-Pulse",
       demoLink: "https://github.com/Mycticount-X/Heart-Pulse/releases"
@@ -121,7 +121,7 @@ const Projects = () => {
       id: 4,
       title: "Intervon",
       description: "An AI-powered interview coach designed for real-time and objective job interview simulation.",
-      image: "./logo.jpg",
+      image: "./Projects/intervon-poster.png",
       tags: [
         { name: "React", style: "bg-blue-100 text-blue-700" },
         { name: "FASTAPI", style: "bg-yellow-100 text-yellow-700" },
