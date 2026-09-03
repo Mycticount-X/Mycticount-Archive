@@ -50,7 +50,7 @@ const Footer = () => {
                 </a>
               </li> */}
               <li>
-                <a href="./assets/CV_Michael.pdf" download className="text-gray-400 hover:text-white transition-colors flex items-center group">
+                <a href="./CV_Michael.pdf" download className="text-gray-400 hover:text-white transition-colors flex items-center group">
                   <i className="fas fa-download text-xs mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0"></i>
                   <span className="transform transition-transform duration-300 group-hover:translate-x-2">Download CV</span>
                 </a>
