@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion, type Variants } from 'framer-motion';
-import './Home.css';
 
 const Home = () => {
   const [text, setText] = useState('');
@@ -86,7 +85,7 @@ const Home = () => {
             </div> */}
 
             <p className="text-2xl lg:text-4xl font-bold text-gray-900 italic mt-8">
-              <span className="gradient-text">Hello, I'm</span>
+              <span className="bg-gradient-to-br from-blue-600 to-blue-500 bg-clip-text text-transparent">Hello, I'm</span>
             </p>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-4">

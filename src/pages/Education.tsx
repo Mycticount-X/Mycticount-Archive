@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { motion, AnimatePresence, type Variants } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { headerVariants, itemVariants, sectionVariants } from '../motion/motion-style';
 
 type Role = {
   title: string;
@@ -138,31 +139,19 @@ const Education = () => {
     },
   ];
 
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const cardVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
-    },
-  };
-
   const toggleOrg = (id: string) => {
     setExpandedOrg(expandedOrg === id ? null : id);
   };
 
   return (
-    <section id="education" className="py-20 bg-gray-50 relative overflow-hidden min-h-screen flex items-center">
+    <motion.section
+      id="education"
+      className="py-20 bg-gray-50 relative overflow-hidden min-h-screen flex items-center"
+      variants={sectionVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: '-50px' }}
+    >
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full opacity-30 -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-100 rounded-full opacity-30 translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
@@ -170,22 +159,22 @@ const Education = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         {/* Section Title */}
-        <div className="text-center mb-16 fade-in-up">
+        <motion.div className="text-center mb-16" variants={headerVariants}>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Education</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
             My academic journey and active roles in student organizations.
           </p>
-        </div>
+        </motion.div>
 
-        <motion.div 
-          variants={containerVariants}
+        <motion.div
+          variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, margin: '-50px' }}
           className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
         >
-          <motion.div variants={cardVariants} className="lg:col-span-5 h-fit">
+          <motion.div variants={itemVariants} className="lg:col-span-5 h-fit">
             <div className="card-hover bg-white border border-gray-200 rounded-2xl shadow-lg p-8 w-full flex flex-col hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center space-x-6 mb-6">
                 <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-blue-50 shadow-sm flex-shrink-0">
@@ -227,10 +216,11 @@ const Education = () => {
           </motion.div>
 		
 		      {/* Organization */}
-          <motion.div variants={cardVariants} className="lg:col-span-7 flex flex-col space-y-4">
+          <motion.div variants={sectionVariants} className="lg:col-span-7 flex flex-col space-y-4">
             {organizations.map((org) => (
-              <div 
-                key={org.id} 
+              <motion.div
+                key={org.id}
+                variants={itemVariants}
                 className={`bg-white border ${expandedOrg === org.id ? 'border-blue-400 shadow-lg' : 'border-gray-200 shadow-md'} rounded-2xl overflow-hidden transition-all duration-300`}
               >
                 {/* Accordion Header */}
@@ -286,12 +276,12 @@ const Education = () => {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
