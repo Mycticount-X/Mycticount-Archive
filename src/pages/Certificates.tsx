@@ -23,7 +23,7 @@ const Certificates = () => {
       issuer: "Issued by Microsoft",
       date: "March 2026",
       description: "Passed the Microsoft AI-900 Certification Exam, demonstrating foundational knowledge of Artificial Intelligence and Microsoft Azure AI services. The certification validates core competencies in machine learning concepts, Natural Language Processing (NLP), Computer Vision, AI ethics, and practical cloud-based AI applications.",
-      image: "/Certificates/microsoft-ai-900.jpg",
+      image: "./Certificates/microsoft-ai-900.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
@@ -32,7 +32,7 @@ const Certificates = () => {
       issuer: "Issued by Universitas Gadjah Mada",
       date: "March 2026",
       description: "Competed in the UGM ASEAN Case Competition (UACC) 2026 as a member of 'Team ResiliASEAN'. Demonstrated strong analytical, problem-solving, and strategic thinking skills by developing comprehensive and innovative solutions for complex business cases within the Southeast Asian regional context.",
-      image: "/Certificates/uacc.jpg",
+      image: "./Certificates/uacc.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
@@ -41,7 +41,7 @@ const Certificates = () => {
       issuer: "Issued by PayLabs and Alibaba Cloud",
       date: "March 2026",
       description: "Participated in the PayLabs x Alibaba Cloud Mini Hackathon and developed 'HoverPay', an innovative biometric payment application. The system utilizes palm vein pattern recognition for secure transactions, fully integrated with the PayLabs Payment Gateway to provide a seamless and contactless user experience.",
-      image: "/Certificates/paylabs-alibaba.png",
+      image: "./Certificates/paylabs-alibaba.png",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
@@ -50,7 +50,7 @@ const Certificates = () => {
       issuer: "Issued by S-Class Binus",
       date: "July 2026",
       description: "Awarded by S-Class Binus in recognition of active contributions and technical involvement in the development of 'Pantryon', an innovative digital product creation initiative.",
-      image: "/Certificates/sc-pantryon.jpg",
+      image: "./Certificates/sc-pantryon.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
@@ -59,7 +59,7 @@ const Certificates = () => {
       issuer: "Issued by DSC Binus",
       date: "January 2026",
       description: "During the DSC Olympiad 2025, I served as the PIC of the Event Division, responsible for planning the overall flow, managing timelines, and supervising on-site execution to ensure a seamless and engaging competition.",
-      image: "/Certificates/dsc-dsco.jpg",
+      image: "./Certificates/dsc-dsco.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
@@ -68,7 +68,7 @@ const Certificates = () => {
       issuer: "Issued by DSC Binus",
       date: "January 2026",
       description: "As an Activist in the Human Capital Division, I facilitated member recruitment, internal training, and engagement programs, helping to build a supportive environment where members could maximize their technical and interpersonal potential.",
-      image: "/Certificates/dsc-hc.jpg",
+      image: "./Certificates/dsc-hc.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
@@ -77,7 +77,7 @@ const Certificates = () => {
       issuer: "Issued by Nvidia",
       date: "February 2025",
       description: "Completed an Onsite Nvidia Workshop focused on deep learning fundamentals, including neural networks, convolutional networks, recurrent networks, and practical applications.",
-      image: "/nvidia.jpg",
+      image: "./Certificates/nvidia.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
@@ -86,7 +86,7 @@ const Certificates = () => {
       issuer: "Issued by GreatNusa and Microsoft",
       date: "April 2025",
       description: "Completed the Microsoft Azure AI Fundamentals course, gaining knowledge of artificial intelligence concepts and how to implement AI solutions using Microsoft Azure services.",
-      image: "/microsoft.jpg",
+      image: "./Certificates/microsoft.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
@@ -95,7 +95,7 @@ const Certificates = () => {
       issuer: "Issued by CSC Binus",
       date: "June 2025",
       description: "Joined the prestigious Capture The Flag cybersecurity tournament by Cyber Security Community Binus, demonstrating skills in penetration testing and digital forensics.",
-      image: "/ctf.jpg",
+      image: "./Certificates/ctf.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
@@ -104,7 +104,7 @@ const Certificates = () => {
       issuer: "Issued by DSC Binus",
       date: "October 2025",
       description: "During the Welcoming Party 2025, I served as PIC of the Logistics Division, overseeing inventory, equipment, and food distribution while coordinating with other divisions to ensure smooth event operations.",
-      image: "/pic-log.jpg",
+      image: "./Certificates/pic-log.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
@@ -113,7 +113,7 @@ const Certificates = () => {
       issuer: "Issued by DSC Binus",
       date: "February 2025",
       description: "Coordinated the official inauguration and handover ceremony for the Data Science Club, Delegasi Outline Program Kerja (DONGKER), ensuring a seamless leadership transition and honoring the contributions of the outgoing board.",
-      image: "/dongker.jpeg",
+      image: "./Certificates/dongker.jpeg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
