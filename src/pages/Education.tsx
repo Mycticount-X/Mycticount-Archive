@@ -31,7 +31,7 @@ const Education = () => {
       <>Maintaining an <strong>Exceptional Academic Record</strong> while holding active leadership roles across 4 different student organizations.</>,
       <>Trusted as <strong>PIC of Event and Logistics</strong> for large-scale tech events, including DSC Olympiad 2025 and DSC Welcoming Party 2025.</>,
       <>Recognized with the <strong>'Outstanding Performance'</strong> award at DSC Binus for exceptional contributions to event management and organizational growth.</>,
-      <>Competitive Hackathon Participant (<strong>Microsoft elevAIte 2024, Gemastik 2025, DevFest Jakarta 2025</strong>), consistently delivering innovative tech solutions under pressure.</>,
+      <>Competitive Hackathon Participant (<strong>Microsoft elevAIte 2024, Gemastik 2025, PayLabs x Alibaba Cloud 2026</strong>), consistently delivering innovative tech solutions under pressure.</>,
       <>Active contributor to <strong>Academic Research Paper</strong>, specifically focusing on <strong>Artificial Intelligence and Computer Vision</strong> at prominent research conferences.</>
     ]
   };

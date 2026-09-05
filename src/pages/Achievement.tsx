@@ -16,7 +16,7 @@ const Achievement = () => {
     {
       id: 2,
       title: "Hackathon Enthusiast",
-      description: "Participated in various Hackathon such as Microsoft elevAIte 2024, Gemastik 2025, and DevFest Jakarta 2025.",
+      description: "Participated in various Hackathon such as Microsoft elevAIte 2024, Gemastik 2025, and PayLabs x Alibaba Cloud 2026.",
       image: "./Achievement/gemastik.jpeg",
       icon: "fas fa-laptop-code",
       imgBg: "from-blue-50 to-blue-100",
