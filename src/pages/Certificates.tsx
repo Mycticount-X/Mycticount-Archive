@@ -122,7 +122,7 @@ const Certificates = () => {
       issuer: "Issued by DSC Binus",
       date: "October 2025",
       description: "Awarded for exceptional operational management and logistical execution as the Person in Charge (PIC) of Logistics during the DSC Welcoming Party 2025.",
-      image: "/outstanding.png",
+      image: "./Certificates/outstanding.png",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
   ];
