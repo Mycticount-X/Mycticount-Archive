@@ -8,7 +8,7 @@ const Achievement = () => {
       id: 1,
       title: "Vice President of S-Class",
       description: "The School of Computer Science's flagship class in the Product Creation division, focuses on the development of technology products.",
-      image: "/s-class.jpg",
+      image: "./Achievement/s-class.jpg",
       icon: "fas fa-star",
       imgBg: "from-yellow-50 to-yellow-100",
       iconBg: "from-yellow-400 to-yellow-600"
@@ -16,8 +16,8 @@ const Achievement = () => {
     {
       id: 2,
       title: "Hackathon Enthusiast",
-      description: "Participated in various Hackathon such as Microsoft elevAIte 2024, Gemastik 2025, and DevFest Jakarta 2025.",
-      image: "/gemastik.jpeg",
+      description: "Participated in various Hackathon such as Microsoft elevAIte 2024, Gemastik 2025, and PayLabs x Alibaba Cloud 2026.",
+      image: "./Achievement/gemastik.jpeg",
       icon: "fas fa-laptop-code",
       imgBg: "from-blue-50 to-blue-100",
       iconBg: "from-blue-400 to-blue-600"
@@ -26,7 +26,7 @@ const Achievement = () => {
       id: 3,
       title: "Founder of Myctix Archive",
       description: "A digital learning companion built on Notion, designed exclusively for Binus freshmen who want to master their courses with clarity, structure, and less stress.",
-      image: "/myctix-archive.jpeg",
+      image: "./Achievement/myctix-archive.jpeg",
       icon: "fas fa-book",
       imgBg: "from-purple-50 to-purple-100",
       iconBg: "from-purple-400 to-purple-600"
@@ -35,7 +35,7 @@ const Achievement = () => {
       id: 4,
       title: "Ex-Trainee of SLC",
       description: "Joined as a trainee laboratory assistant and participate in Core Training at Binus University Student Laboratory Center.",
-      image: "/aslab.jpg",
+      image: "./Achievement/aslab.jpg",
       icon: "fas fa-user-graduate",
       imgBg: "from-pink-50 to-pink-100",
       iconBg: "from-pink-400 to-pink-600"
@@ -44,7 +44,7 @@ const Achievement = () => {
       id: 5,
       title: "Event and Logistic Coordinator",
       description: "Led major organisational events such as the DSC Olympiad and DSC Welcoming Party 2025, coordinating teams and ensuring smooth event execution.",
-      image: "/event.jpeg",
+      image: "./Achievement/event.jpeg",
       icon: "fas fa-people-carry",
       imgBg: "from-green-50 to-green-100",
       iconBg: "from-green-400 to-green-600"
@@ -53,7 +53,7 @@ const Achievement = () => {
       id: 6,
       title: "Multi-Organization Involvement",
       description: "Actively contributed to four different organisations, taking on diverse roles that strengthened my leadership, collaboration, and project execution skills.",
-      image: "/organisation.jpeg",
+      image: "./Achievement/organisation.jpeg",
       icon: "fas fa-network-wired",
       imgBg: "from-orange-50 to-orange-100",
       iconBg: "from-orange-400 to-orange-600"
@@ -62,7 +62,7 @@ const Achievement = () => {
       id: 7,
       title: "English Lecturer at TFI",
       description: "Served as a volunteer English lecturer at Teach for Indonesia, teaching and mentoring many young learners to improve their language skills.",
-      image: "/teaching.jpg",
+      image: "./Achievement/teaching.jpg",
       icon: "fas fa-chalkboard-teacher",
       imgBg: "from-pink-50 to-pink-100",
       iconBg: "from-pink-400 to-pink-600"
@@ -71,7 +71,7 @@ const Achievement = () => {
       id: 8,
       title: "CTF Olympiad",
       description: "Participated in prestigious Capture The Flag competitions, including Crack The Shield 2025 and National Cyber Week 2025.",
-      image: "/ctf.jpg",
+      image: "./Certificates/ctf.jpg",
       icon: "fas fa-shield-alt",
       imgBg: "from-red-50 to-red-100",
       iconBg: "from-red-400 to-red-600"
@@ -80,7 +80,7 @@ const Achievement = () => {
       id: 9,
       title: "App and Web Developer",
       description: "Developed innovative applications showcased in various hackathons, demonstrating creativity and technical skills.",
-      image: "/hackathon.png",
+      image: "./Achievement/hackathon.png",
       icon: "fas fa-code",
       imgBg: "from-indigo-50 to-indigo-100",
       iconBg: "from-indigo-400 to-indigo-600"

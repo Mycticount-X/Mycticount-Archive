@@ -29,7 +29,7 @@ const Skills = () => {
         { name: "PyTorch", style: "bg-orange-100 text-orange-700" },
         { name: "Keras", style: "bg-yellow-100 text-yellow-700" },
         { name: "OpenCV", style: "bg-green-100 text-green-700" },
-        { name: "Azure AI", style: "bg-purple-100 text-purple-700" },
+        { name: "Azure AI", style: "bg-sky-100 text-sky-700" },
         { name: "Pandas", style: "bg-gray-100 text-gray-700" },
       ]
     },
@@ -71,10 +71,11 @@ const Skills = () => {
         { name: "Firebase", style: "bg-red-100 text-red-700" },
         { name: "FastAPI", style: "bg-orange-100 text-orange-700" },
         { name: "Supabase", style: "bg-yellow-100 text-yellow-700" },
-        { name: "ASP.NET", style: "bg-gray-100 text-gray-700" },
         { name: "MySQL", style: "bg-blue-100 text-blue-700" },
         { name: "PostgreSQL", style: "bg-purple-100 text-purple-700" },
         { name: "MongoDB", style: "bg-green-100 text-green-700" },
+        { name: "ASP.NET", style: "bg-gray-100 text-gray-700" },
+        { name: "Azure Cosmos DB", style: "bg-sky-100 text-sky-700" },
       ]
     },
     {
@@ -87,7 +88,7 @@ const Skills = () => {
         { name: "Git", style: "bg-yellow-100 text-yellow-700" },
         { name: "GitHub", style: "bg-green-100 text-green-700" },
         { name: "Vercel", style: "bg-gray-100 text-gray-700" },
-        { name: "Azure DevOps", style: "bg-blue-100 text-blue-700" },
+        { name: "Azure DevOps", style: "bg-sky-100 text-sky-700" },
         { name: "Postman", style: "bg-orange-100 text-orange-700" },
         { name: "Figma", style: "bg-teal-100 text-teal-700" },
         { name: "VS Code", style: "bg-gray-100 text-gray-700" },
