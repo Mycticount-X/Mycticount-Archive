@@ -63,7 +63,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "12",
+      id: "6",
       title: "Outstanding Performance on DSC Welcoming Party",
       issuer: "Issued by DSC Binus",
       date: "October 2025",
@@ -72,7 +72,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "6",
+      id: "7",
       title: "Certificate of Appreciation - Pantryon",
       issuer: "Issued by S-Class Binus",
       date: "July 2026",
@@ -81,7 +81,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "9",
+      id: "8",
       title: "Nvidia Deep Learning",
       issuer: "Issued by Nvidia",
       date: "February 2025",
@@ -90,7 +90,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "7",
+      id: "9",
       title: "PIC of Events - DSC Olympiad 2025",
       issuer: "Issued by DSC Binus",
       date: "January 2026",
@@ -99,7 +99,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "8",
+      id: "10",
       title: "Activist of Human Capital Departement",
       issuer: "Issued by DSC Binus",
       date: "January 2026",
@@ -108,7 +108,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "10",
+      id: "11",
       title: "Crack The Shield Tournament",
       issuer: "Issued by CSC Binus",
       date: "June 2025",
@@ -117,7 +117,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "11",
+      id: "12",
       title: "PIC of Logistics - DSC Welcoming Party 2025",
       issuer: "Issued by DSC Binus",
       date: "October 2025",
