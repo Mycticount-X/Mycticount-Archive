@@ -28,6 +28,24 @@ const Certificates = () => {
     },
     {
       id: "2",
+      title: "ICIMTech Conference Paper",
+      issuer: "Issued by ICIMTech",
+      date: "August 2025",
+      description: "Authored and presented a comparative research study titled 'Comparative Analysis of ResNet50, EfficientNet-B7, and DenseNet121 for Breast Cancer Ultrasound Image Classification'. The publication evaluates state-of-the-art Convolutional Neural Network (CNN) architectures to determine optimal performance metrics for accurate medical image detection.",
+      image: "./Certificates/icimtech.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "3",
+      title: "Dean's List Academic Distinction",
+      issuer: "Issued by BINUS University",
+      date: "February 2026",
+      description: "Awarded the Dean's List distinction for achieving top-tier academic excellence with a 3.97/4.00 GPA in the Computer Science program. This recognition reflects a sustained commitment to high academic standing while concurrently balancing enterprise software development roles and organizational leadership.",
+      image: "./Certificates/deans-list.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "4",
       title: "UGM ASEAN Case Competition (UACC) 2026",
       issuer: "Issued by Universitas Gadjah Mada",
       date: "March 2026",
@@ -36,7 +54,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "3",
+      id: "5",
       title: "PayLabs x Alibaba Cloud Mini Hackathon",
       issuer: "Issued by PayLabs and Alibaba Cloud",
       date: "March 2026",
@@ -45,7 +63,16 @@ const Certificates = () => {
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "4",
+      id: "6",
+      title: "Outstanding Performance on DSC Welcoming Party",
+      issuer: "Issued by DSC Binus",
+      date: "October 2025",
+      description: "Awarded for exceptional operational management and logistical execution as the Person in Charge (PIC) of Logistics during the DSC Welcoming Party 2025.",
+      image: "./Certificates/outstanding.png",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "7",
       title: "Certificate of Appreciation - Pantryon",
       issuer: "Issued by S-Class Binus",
       date: "July 2026",
@@ -54,25 +81,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "5",
-      title: "PIC of Events - DSC Olympiad 2025",
-      issuer: "Issued by DSC Binus",
-      date: "January 2026",
-      description: "During the DSC Olympiad 2025, I served as the PIC of the Event Division, responsible for planning the overall flow, managing timelines, and supervising on-site execution to ensure a seamless and engaging competition.",
-      image: "./Certificates/dsc-dsco.jpg",
-      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
-    },
-    {
-      id: "6",
-      title: "Activist of Human Capital Departement",
-      issuer: "Issued by DSC Binus",
-      date: "January 2026",
-      description: "As an Activist in the Human Capital Division, I facilitated member recruitment, internal training, and engagement programs, helping to build a supportive environment where members could maximize their technical and interpersonal potential.",
-      image: "./Certificates/dsc-hc.jpg",
-      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
-    },
-    {
-      id: "7",
+      id: "8",
       title: "Nvidia Deep Learning",
       issuer: "Issued by Nvidia",
       date: "February 2025",
@@ -81,16 +90,25 @@ const Certificates = () => {
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "8",
-      title: "Microsoft Azure AI Fundamental",
-      issuer: "Issued by GreatNusa and Microsoft",
-      date: "April 2025",
-      description: "Completed the Microsoft Azure AI Fundamentals course, gaining knowledge of artificial intelligence concepts and how to implement AI solutions using Microsoft Azure services.",
-      image: "./Certificates/microsoft.jpg",
+      id: "9",
+      title: "PIC of Events - DSC Olympiad 2025",
+      issuer: "Issued by DSC Binus",
+      date: "January 2026",
+      description: "During the DSC Olympiad 2025, I served as the PIC of the Event Division, responsible for planning the overall flow, managing timelines, and supervising on-site execution to ensure a seamless and engaging competition.",
+      image: "./Certificates/dsc-dsco.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "9",
+      id: "10",
+      title: "Activist of Human Capital Departement",
+      issuer: "Issued by DSC Binus",
+      date: "January 2026",
+      description: "As an Activist in the Human Capital Division, I facilitated member recruitment, internal training, and engagement programs, helping to build a supportive environment where members could maximize their technical and interpersonal potential.",
+      image: "./Certificates/dsc-hc.jpg",
+      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    },
+    {
+      id: "11",
       title: "Crack The Shield Tournament",
       issuer: "Issued by CSC Binus",
       date: "June 2025",
@@ -99,7 +117,7 @@ const Certificates = () => {
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
     {
-      id: "10",
+      id: "12",
       title: "PIC of Logistics - DSC Welcoming Party 2025",
       issuer: "Issued by DSC Binus",
       date: "October 2025",
@@ -107,24 +125,24 @@ const Certificates = () => {
       image: "./Certificates/pic-log.jpg",
       link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
     },
-    {
-      id: "11",
-      title: "Committee of DONGKER DSC 2025",
-      issuer: "Issued by DSC Binus",
-      date: "February 2025",
-      description: "Coordinated the official inauguration and handover ceremony for the Data Science Club, Delegasi Outline Program Kerja (DONGKER), ensuring a seamless leadership transition and honoring the contributions of the outgoing board.",
-      image: "./Certificates/dongker.jpeg",
-      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
-    },
-    {
-      id: "12",
-      title: "Outstanding Performance on DSC Welcoming Party",
-      issuer: "Issued by DSC Binus",
-      date: "October 2025",
-      description: "Awarded for exceptional operational management and logistical execution as the Person in Charge (PIC) of Logistics during the DSC Welcoming Party 2025.",
-      image: "./Certificates/outstanding.png",
-      link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
-    },
+    // {
+    //   id: "11",
+    //   title: "Committee of DONGKER DSC 2025",
+    //   issuer: "Issued by DSC Binus",
+    //   date: "February 2025",
+    //   description: "Coordinated the official inauguration and handover ceremony for the Data Science Club, Delegasi Outline Program Kerja (DONGKER), ensuring a seamless leadership transition and honoring the contributions of the outgoing board.",
+    //   image: "./Certificates/dongker.jpeg",
+    //   link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    // },
+    // {
+    //   id: "8",
+    //   title: "Microsoft Azure AI Fundamental",
+    //   issuer: "Issued by GreatNusa and Microsoft",
+    //   date: "April 2025",
+    //   description: "Completed the Microsoft Azure AI Fundamentals course, gaining knowledge of artificial intelligence concepts and how to implement AI solutions using Microsoft Azure services.",
+    //   image: "./Certificates/microsoft.jpg",
+    //   link: "https://www.linkedin.com/in/Michael-Ahlovely-Stevenson/details/certifications/"
+    // },
   ];
 
   const totalPages = Math.ceil(certificatesData.length / itemsPerPage);

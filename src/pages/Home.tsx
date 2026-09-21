@@ -132,7 +132,7 @@ const Home = () => {
               <a href="https://www.linkedin.com/in/michael-ahlovely-stevenson-7b1b62325/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-100 hover:bg-gray-900 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                 <i className="fab fa-linkedin-in text-xl"></i>
               </a>
-              <a href="mailto:mxlovers77@gmail.com" className="w-12 h-12 bg-gray-100 hover:bg-gray-900 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+              <a href="mailto:mycticountx@gmail.com" className="w-12 h-12 bg-gray-100 hover:bg-gray-900 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
                 <i className="fas fa-envelope text-xl"></i>
               </a>
               <a href="https://www.instagram.com/michael23master" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-100 hover:bg-gray-900 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">

@@ -78,7 +78,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <a href="./CV_Michael.pdf" download className="hidden lg:inline-flex items-center space-x-2 bg-black text-white px-6 py-2 rounded-lg hover:bg-blue-300 hover:text-black transition-colors shadow-md font-medium">
+            <a href="./ATS CV - Michael AS - Enrichment.pdf" download className="hidden lg:inline-flex items-center space-x-2 bg-black text-white px-6 py-2 rounded-lg hover:bg-blue-300 hover:text-black transition-colors shadow-md font-medium">
               <i className="fas fa-download"></i>
               <span>Download CV</span>
             </a>
@@ -118,7 +118,7 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <a href="./CV_Michael.pdf" download className="block py-3 px-4 bg-black text-white hover:bg-blue-300 hover:text-black rounded-lg transition-colors font-medium text-center">
+              <a href="./ATS CV - Michael AS - Enrichment.pdf" download className="block py-3 px-4 bg-black text-white hover:bg-blue-300 hover:text-black rounded-lg transition-colors font-medium text-center">
                 <i className="fas fa-download mr-2"></i>Download CV
               </a>
             </div>

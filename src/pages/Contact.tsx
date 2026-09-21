@@ -62,7 +62,7 @@ const Contact = () => {
 
             {/* Button */}
             <a 
-              href="mailto:mxlovers77@gmail.com" 
+              href="mailto:mycticountx@gmail.com" 
               className="inline-flex items-center p-2 pr-8 bg-gray-50 rounded-full hover:bg-blue-50 transition-all duration-300 group/btn border border-gray-200 hover:border-blue-200"
             >
               <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-blue-600 group-hover/btn:bg-blue-600 group-hover/btn:text-white transition-all duration-300 shadow-sm mr-5">
@@ -70,7 +70,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-xs text-gray-500 font-bold tracking-wider uppercase mb-0.5">Drop a line at</p>
-                <p className="text-gray-900 font-bold text-lg">mxlovers77@gmail.com</p>
+                <p className="text-gray-900 font-bold text-lg">mycticountx@gmail.com</p>
               </div>
             </a>
           </motion.div>
