@@ -38,10 +38,9 @@ const Journey = () => {
       roleColor: "text-teal-600",
       period: "Aug 2025 - Present",
       logo: "./Logo/myctix-archive.jpg",
-      description: "Founded and manage a comprehensive Notion-based learning platform tailored for Computer Science students. Curated structured study guides and course outlines, successfully supporting over 100 active users.",
+      description: "Founded and manage a comprehensive Notion-based learning platform tailored for Computer Science students. Curated structured study guides and course outlines, successfully supporting over 250 active users.",
       tags: [
-        { text: "100+ Users", bgColor: "bg-teal-100", textColor: "text-teal-700" },
-        { text: "4.9/5 Rating", bgColor: "bg-blue-100", textColor: "text-blue-700" }
+        { text: "250+ Users", bgColor: "bg-teal-100", textColor: "text-teal-700" },
       ]
     },
     {
